@@ -51,17 +51,8 @@ class MainActivity : ComponentActivity() {
                 verticalArrangement = Arrangement.SpaceEvenly
             ) {
 
-                MainMenuElement(
-                    title = "Sundhedsinfo Barn"
-                )
+                MainMenu()
                 //Spacer(modifier = Modifier.height(50.dp))
-                MainMenuElement(
-                    title = "Sundhedsinfo Forældre"
-                )
-                Text("Hello", modifier = Modifier.clickable {  })
-                Text("World", modifier = Modifier
-                    //.draggable()
-                    .offset(50.dp, 20.dp))
 
             }
             /*//val painter = painterResource(id = R.drawable.kermit)
@@ -85,6 +76,42 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     Greeting("Android")
+}
+
+@Composable
+fun MainMenu(
+    modifier: Modifier = Modifier,
+    //horizontalArrangement = Arrangement.CenterHorizontally,
+    //verticalArrangement = Arrangement.SpaceEvenly
+) {
+    Row (modifier = Modifier
+        .padding(20.dp)
+        .background(color = Color.Blue),
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        MainMenuElement(
+            title = "Sundhedsinfo Barn"
+        )
+        Spacer(modifier = Modifier.width(50.dp))
+        MainMenuElement(
+            title = "Sundhedsinfo Forældre"
+        )
+    }
+    Row (modifier = Modifier
+        .padding(20.dp)
+        .background(color = Color.Blue),
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        verticalAlignment = Alignment.CenterVertically
+        ) {
+        MainMenuElement(
+            title = "Opskrifter Barn"
+        )
+        Spacer(modifier = Modifier.width(50.dp))
+        MainMenuElement(
+            title = "Opskrifter Forældre"
+        )
+    }
 }
 
 @Composable
