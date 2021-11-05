@@ -56,9 +56,9 @@ class MainActivity : ComponentActivity() {
                 //Spacer(modifier = Modifier.height(50.dp))
 
             }
-            /*//val painter = painterResource(id = R.drawable.kermit)
-            val description = "Kermit playing in the snow"
-            val title = "Kermit playing in the snow"
+            /*//val painter = painterResource(id = R.drawable.)
+            val description = ""
+            val title = ""
             ImageCard(
                 //painter = painter,
                 contentDescription = description,
@@ -84,6 +84,7 @@ fun MainMenu(
     modifier: Modifier = Modifier
 ) {
     MainMenuRow(title = "Health Info", subject1 = "Child", subject2 = "Parent")
+    MainMenuRow(title = "Recipes", subject1 = "Child", subject2 = "Parent")
 }
 
 @Composable
@@ -91,7 +92,7 @@ fun MainMenuRow(
     title: String,
     subject1: String,
     subject2: String,
-    modifier: Modifier = Modifier
+    //modifier: Modifier = Modifier
 ) {
     Card(
         shape = RoundedCornerShape(10.dp), //rounded corners of outer box
@@ -108,8 +109,8 @@ fun MainMenuRow(
                 style = TextStyle(
                     color = Color.White,
                     fontSize = 16.sp,
-                    textAlign = TextAlign.Center),
-            modifier = Modifier.offset(10.dp, 0.dp))
+                    textAlign = TextAlign.Center)//.offset(40.dp, 40.dp))
+            )
 
             Row(
                 modifier = Modifier
@@ -155,6 +156,12 @@ fun MainMenuElement(
     }
 }
 
+
+
+
+
+/* Below is exercise code, used as inspiration
+*
 @Composable
 fun ImageCard(
     //painter: Painter,
@@ -184,7 +191,7 @@ fun ImageCard(
         }
     }
 }
-
+*/
 /* Textfields, Buttons and showing snackbars
 *
 * val scaffoldState = rememberScaffoldState()
