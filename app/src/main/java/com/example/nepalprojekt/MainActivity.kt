@@ -42,7 +42,9 @@ class MainActivity : ComponentActivity() {
                 }
             }*/
             val painter = painterResource(id = R.drawable.background1)
-                Column (modifier = Modifier
+
+            MainMenu(painter = painter)
+        /*Column (modifier = Modifier
                     .fillMaxSize()
                     //.background(Color(0xfff5baf4))
                     //.background(Color(0xeba6f3))
@@ -57,7 +59,7 @@ class MainActivity : ComponentActivity() {
                     MainMenu(painter = painter)
                     //Spacer(modifier = Modifier.height(50.dp))
 
-                }
+                }*/
 
 
 
@@ -89,9 +91,27 @@ fun MainMenu(
     painter: Painter,
     modifier: Modifier = Modifier
 ) {
+    Box(
+        modifier = Modifier.fillMaxSize()
+    ){
+        Image(
+            painter = painter,
+            contentDescription = "backgroundPhoto",
+            contentScale = ContentScale.FillBounds
+        ) }
+    Column (modifier = Modifier
+        .fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceEvenly,
 
-    MainMenuRow(title = "Health Info", subject1 = "Parent", subject2 = "Child")
-    MainMenuRow(title = "Recipes", subject1 = "Parent", subject2 = "Child")
+    ) {
+
+        MainMenuRow(title = "Health Info", subject1 = "Parent", subject2 = "Child")
+        MainMenuRow(title = "Recipes", subject1 = "Parent", subject2 = "Child")
+
+    }
+
+
 }
 
 @Composable
