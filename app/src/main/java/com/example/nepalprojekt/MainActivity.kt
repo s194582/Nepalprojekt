@@ -78,8 +78,7 @@ fun MainMenu(
 fun MainMenuRow( // Grøn box
     title: String,
     subject1: String,
-    subject2: String,
-    //modifier: Modifier = Modifier
+    subject2: String
 ) {
     Card(
         shape = RoundedCornerShape(10.dp), //rounded corners of outer box
@@ -126,17 +125,13 @@ fun MainMenuRow( // Grøn box
 fun MainMenuElement( //Sort box
     subject: String,
     modifier: Modifier = Modifier
-) {//val scope = rememberCoroutineScope()
-    //val recipes = Recipes()
+) {
     Card(
         shape = RoundedCornerShape(10.dp),
         elevation = 5.dp,
         modifier = Modifier
             .padding(5.dp)
         ) {
-    /*Button(onClick = {navController.nav}) {
-
-    }*/
     Box(
             modifier = Modifier
                 .clickable { }
