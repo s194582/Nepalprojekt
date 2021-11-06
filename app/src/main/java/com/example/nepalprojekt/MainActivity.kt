@@ -88,7 +88,7 @@ fun MainMenu(
 }
 
 @Composable
-fun MainMenuRow(
+fun MainMenuRow( // Grøn box
     title: String,
     subject1: String,
     subject2: String,
@@ -131,7 +131,7 @@ fun MainMenuRow(
 }
 
 @Composable
-fun MainMenuElement(
+fun MainMenuElement( //Sort box
     subject: String,
     modifier: Modifier = Modifier
 ) {
