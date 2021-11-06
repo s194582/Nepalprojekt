@@ -26,6 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.nepalprojekt.ui.theme.NepalprojektTheme
+import com.example.nepalprojekt.ui.theme.Recipes
 import kotlinx.coroutines.launch
 import javax.security.auth.Subject
 
@@ -40,22 +41,26 @@ class MainActivity : ComponentActivity() {
 
                 }
             }*/
-            Column (modifier = Modifier
-                .fillMaxSize()
-                .background(Color(0xffeba6f3))
-                //.background(Color(0xeba6f3))
-                //.fillMaxWidth()
-                //.border(5.dp, Color.Green)
-                //.padding(16.dp)
-                ,
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.SpaceEvenly
-            ) {
+            val painter = painterResource(id = R.drawable.background1)
+                Column (modifier = Modifier
+                    .fillMaxSize()
+                    //.background(Color(0xfff5baf4))
+                    //.background(Color(0xeba6f3))
+                    //.fillMaxWidth()
+                    //.border(5.dp, Color.Green)
+                    //.padding(16.dp)
+                    ,
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.SpaceEvenly,
+                    //painter = painter
+                ) {
+                    MainMenu(painter = painter)
+                    //Spacer(modifier = Modifier.height(50.dp))
 
-                MainMenu()
-                //Spacer(modifier = Modifier.height(50.dp))
+                }
 
-            }
+
+
             /*//val painter = painterResource(id = R.drawable.)
             val description = ""
             val title = ""
@@ -81,10 +86,12 @@ fun DefaultPreview() {
 
 @Composable
 fun MainMenu(
+    painter: Painter,
     modifier: Modifier = Modifier
 ) {
-    MainMenuRow(title = "Health Info", subject1 = "Child", subject2 = "Parent")
-    MainMenuRow(title = "Recipes", subject1 = "Child", subject2 = "Parent")
+
+    MainMenuRow(title = "Health Info", subject1 = "Parent", subject2 = "Child")
+    MainMenuRow(title = "Recipes", subject1 = "Parent", subject2 = "Child")
 }
 
 @Composable
@@ -105,26 +112,31 @@ fun MainMenuRow( // Grøn box
                 .background(Color.Green)
                 .padding(10.dp) //between inner and outer box
         ){
-            Text(title,
-                style = TextStyle(
-                    color = Color.White,
-                    fontSize = 16.sp,
-                    textAlign = TextAlign.Center)//.offset(40.dp, 40.dp))
-            )
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceEvenly,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                MainMenuElement(
-                    subject = subject1
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.SpaceEvenly) {
+                Text(title,
+                    style = TextStyle(
+                        color = Color.Black,
+                        fontSize = 18.sp,
+                        textAlign = TextAlign.Center)//.offset(40.dp, 40.dp))
                 )
-                MainMenuElement(
-                    subject = subject2
-                )
+                Spacer(modifier = Modifier.height(10.dp))
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    MainMenuElement(
+                        subject = subject1
+                    )
+                    MainMenuElement(
+                        subject = subject2
+                    )
+                }
             }
+
         }
 
     }
@@ -134,17 +146,21 @@ fun MainMenuRow( // Grøn box
 fun MainMenuElement( //Sort box
     subject: String,
     modifier: Modifier = Modifier
-) {
+) {//val scope = rememberCoroutineScope()
+    //val recipes = Recipes()
     Card(
         shape = RoundedCornerShape(10.dp),
         elevation = 5.dp,
         modifier = Modifier
             .padding(5.dp)
-    ) {
-        Box(
+        ) {
+    /*Button(onClick = {navController.nav}) {
+
+    }*/
+    Box(
             modifier = Modifier
                 .clickable { }
-                .background(Color(0xFF101010))
+                .background(Color(0xFFb533b3))
                 .padding(10.dp)
         ) {
             Text(subject,
@@ -154,6 +170,7 @@ fun MainMenuElement( //Sort box
                     textAlign = TextAlign.Center))
         }
     }
+
 }
 
 
