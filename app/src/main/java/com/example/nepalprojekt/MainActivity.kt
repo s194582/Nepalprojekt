@@ -102,8 +102,8 @@ fun MainMenu(
 
     ) {
 
-        MainMenuRow(title = "Health Info", subject1 = "Parent", subject2 = "Child")
-        MainMenuRow(title = "Recipes", subject1 = "Parent", subject2 = "Child")
+        MainMenuRow(title = "Health Info", subject1 = "Parent", subject2 = "Child", navController = navController)
+        MainMenuRow(title = "Recipes", subject1 = "Parent", subject2 = "Child", navController = navController)
 
     }
 
@@ -112,6 +112,7 @@ fun MainMenu(
 
 @Composable
 fun MainMenuRow( // Grøn box
+    navController: NavController,
     title: String,
     subject1: String,
     subject2: String,
@@ -145,10 +146,12 @@ fun MainMenuRow( // Grøn box
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     MainMenuElement(
-                        subject = subject1
+                        subject = subject1,
+                        navController = navController
                     )
                     MainMenuElement(
-                        subject = subject2
+                        subject = subject2,
+                        navController = navController
                     )
                 }
             }
@@ -159,7 +162,8 @@ fun MainMenuRow( // Grøn box
 }
 
 @Composable
-fun MainMenuElement( //Sort box
+fun MainMenuElement(
+    navController: NavController,
     subject: String,
     modifier: Modifier = Modifier
 ) {//val scope = rememberCoroutineScope()
@@ -173,21 +177,19 @@ fun MainMenuElement( //Sort box
     /*Button(onClick = {navController.nav}) {
 
     }*/
-    Box(
-            modifier = Modifier
-                .clickable { }
-                .background(Color(0xFFb533b3))
-                .padding(10.dp)
-
+        Button(onClick = {navController.navigate(Screen.RecipeAdultScreen.route) }
+            //modifier = Modifier
+                //.clickable { }
+                //.background(Color(0xFFb533b3))
+                //.padding(10.dp)
         ) {
             Text(subject,
                  style = TextStyle(
-                    color = Color.White,
-                    fontSize = 16.sp,
-                    textAlign = TextAlign.Center))
+                     color = Color.White,
+                     fontSize = 16.sp,
+                     textAlign = TextAlign.Center))
         }
     }
-
 }
 
 

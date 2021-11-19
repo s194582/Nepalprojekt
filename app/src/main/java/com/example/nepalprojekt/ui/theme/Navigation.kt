@@ -21,15 +21,8 @@ fun Navigation() {
             MainMenu(navController = navController)
         }
         composable( route = Screen.RecipeAdultScreen.route //+ "?name={name}",
-                /*arguments = listOf(
-                    navArgument("testNavArgument") {
-                        type = NavType.StringType
-                        defaultValue = "default recipe"
-                        nullable = true
-                    }
-                )*/
             ) { //entry ->
-            Recipes()//name = entry.arguments?.getString("name"))
+            Recipes(navController = navController)//name = entry.arguments?.getString("name"))
         }
     }
 }
