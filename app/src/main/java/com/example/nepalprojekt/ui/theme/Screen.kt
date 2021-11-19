@@ -3,5 +3,5 @@ package com.example.nepalprojekt.ui.theme
 //Sealed classes only allows classes inside of the class itself to inherit from it
 sealed class Screen(val route:String) {
     object MainMenu : Screen("main_menu")
-    object RecipeAdultsScreen : Screen("recipe_adults_screen")
+    object RecipeAdultScreen : Screen("recipe_adult_screen")
 }

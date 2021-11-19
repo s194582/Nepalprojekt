@@ -27,8 +27,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
+import com.example.nepalprojekt.ui.theme.Navigation
 import com.example.nepalprojekt.ui.theme.NepalprojektTheme
 import com.example.nepalprojekt.ui.theme.Recipes
+import com.example.nepalprojekt.ui.theme.Screen
 import kotlinx.coroutines.launch
 import javax.security.auth.Subject
 
@@ -43,6 +45,8 @@ class MainActivity : ComponentActivity() {
 
                 }
             }*/
+            Navigation()
+
             val painter = painterResource(id = R.drawable.background1)
 
             //MainMenu(painter = painter)
@@ -73,24 +77,24 @@ fun DefaultPreview() {
 @Composable
 fun MainMenu(
     navController: NavController,
-    painter: Painter,
+    //painter: Painter,
     modifier: Modifier = Modifier
 ) {
     var text by remember {
         mutableStateOf("")
     }
     TextField(value = text, onValueChange = {text = it})
-    Button(onClick = { /*TODO*/ }) {
-        Text(text = "Test to RecipeScreen")
+    Button(onClick = { navController.navigate(Screen.RecipeAdultScreen.route) }) {
+        Text(text = "Test going to RecipeScreen")
     }
     Box(
         modifier = Modifier.fillMaxSize()
     ){
-        Image(
+        /*Image(
             painter = painter,
             contentDescription = "backgroundPhoto",
             contentScale = ContentScale.FillBounds
-        ) }
+        )*/ }
     Column (modifier = Modifier
         .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
