@@ -25,6 +25,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import com.example.nepalprojekt.ui.theme.NepalprojektTheme
 import com.example.nepalprojekt.ui.theme.Recipes
 import kotlinx.coroutines.launch
@@ -43,25 +45,7 @@ class MainActivity : ComponentActivity() {
             }*/
             val painter = painterResource(id = R.drawable.background1)
 
-            MainMenu(painter = painter)
-        /*Column (modifier = Modifier
-                    .fillMaxSize()
-                    //.background(Color(0xfff5baf4))
-                    //.background(Color(0xeba6f3))
-                    //.fillMaxWidth()
-                    //.border(5.dp, Color.Green)
-                    //.padding(16.dp)
-                    ,
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.SpaceEvenly,
-                    //painter = painter
-                ) {
-                    MainMenu(painter = painter)
-                    //Spacer(modifier = Modifier.height(50.dp))
-
-                }*/
-
-
+            //MainMenu(painter = painter)
 
             /*//val painter = painterResource(id = R.drawable.)
             val description = ""
@@ -88,9 +72,17 @@ fun DefaultPreview() {
 
 @Composable
 fun MainMenu(
+    navController: NavController,
     painter: Painter,
     modifier: Modifier = Modifier
 ) {
+    var text by remember {
+        mutableStateOf("")
+    }
+    TextField(value = text, onValueChange = {text = it})
+    Button(onClick = { /*TODO*/ }) {
+        Text(text = "Test to RecipeScreen")
+    }
     Box(
         modifier = Modifier.fillMaxSize()
     ){
@@ -182,6 +174,7 @@ fun MainMenuElement( //Sort box
                 .clickable { }
                 .background(Color(0xFFb533b3))
                 .padding(10.dp)
+
         ) {
             Text(subject,
                  style = TextStyle(
