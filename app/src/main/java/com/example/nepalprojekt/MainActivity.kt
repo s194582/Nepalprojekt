@@ -51,7 +51,7 @@ fun Greeting(name: String) {
     Text(text = "Hello $name!")
 }
 
-@Preview(showBackground = true)
+//@Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     Greeting("Android")
@@ -66,10 +66,10 @@ fun MainMenu(
     var text by remember {
         mutableStateOf("")
     }
-    TextField(value = text, onValueChange = {text = it})
+    /*TextField(value = text, onValueChange = {text = it})
     Button(onClick = { navController.navigate(Screen.RecipeAdultScreen.route) }) {
         Text(text = "Test going to RecipeScreen")
-    }
+    }*/
     Box(
         modifier = Modifier.fillMaxSize()
     ){
