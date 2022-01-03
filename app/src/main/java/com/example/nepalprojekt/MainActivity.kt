@@ -143,43 +143,13 @@ fun MainMenuRow( // Grøn box
                     )
                 }
             }
-
-        }
-
-    }
-}
-
-@Composable
-fun MainMenuElement(
-    navController: NavController,
-    subject: String,
-    modifier: Modifier = Modifier
-) {//val scope = rememberCoroutineScope()
-    //val recipes = Recipes()
-    Card(
-        shape = RoundedCornerShape(10.dp),
-        elevation = 5.dp,
-        modifier = Modifier
-            .padding(5.dp)
-        ) {
-    /*Button(onClick = {navController.nav}) {
-
-    }*/
-        Button(onClick = {navController.navigate(Screen.RecipeAdultScreen.route) }
-            //modifier = Modifier
-                //.clickable { }
-                //.background(Color(0xFFb533b3))
-                //.padding(10.dp)
-        ) {
-            Text(subject,
-                 style = TextStyle(
-                     color = Color.White,
-                     fontSize = 16.sp,
-                     textAlign = TextAlign.Center))
         }
     }
 }
 */
+/**
+ * Health info
+ */
 @Composable
 fun HealthRow( // Box containing two buttons for health info
     navController: NavController,
@@ -215,12 +185,10 @@ fun HealthRow( // Box containing two buttons for health info
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     ButtonElement(
-                        subject = subject1,
-                        navController = navController
+                        subject = subject1
                     ) { navController.navigate(Screen.RecipeAdultScreen.route) } //<-route for onClick for button
                     ButtonElement(
-                        subject = subject2,
-                        navController = navController
+                        subject = subject2
                     ) { navController.navigate(Screen.RecipeAdultScreen.route) }
                 }
             }
@@ -228,6 +196,9 @@ fun HealthRow( // Box containing two buttons for health info
     }
 }
 
+/**
+ * Recipes
+ */
 @Composable
 fun RecipeRow( // Box containing two buttons for recipes
     navController: NavController,
@@ -263,12 +234,10 @@ fun RecipeRow( // Box containing two buttons for recipes
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     ButtonElement(
-                        subject = subject1,
-                        navController = navController
+                        subject = subject1
                     ) { navController.navigate(Screen.RecipeAdultScreen.route) }
                     ButtonElement(
-                        subject = subject2,
-                        navController = navController
+                        subject = subject2
                     ) { navController.navigate(Screen.RecipeAdultScreen.route) }
                 }
             }
@@ -278,10 +247,10 @@ fun RecipeRow( // Box containing two buttons for recipes
 
 /**
  * Reusable button element
+ * Holds a subject and an onClick function
  */
 @Composable
 fun ButtonElement(
-    navController: NavController,
     subject: String,
     onClick: () -> Unit
 ) {
@@ -291,10 +260,7 @@ fun ButtonElement(
         modifier = Modifier
             .padding(5.dp)
     ) {
-        Button(onClick = onClick //Creates reusable button
-            //modifier = Modifier
-            //.background(Color(0xFFb533b3))
-            //.padding(10.dp)
+        Button(onClick = onClick //Creates reusable button function
         ) {
             Text(subject,
                 style = TextStyle(
@@ -302,19 +268,6 @@ fun ButtonElement(
                     fontSize = 16.sp,
                     textAlign = TextAlign.Center))
         }
-
-
-        /*
-        Box(
-            modifier = Modifier
-                .background(Color(0xFFb533b3))
-                .padding(2.dp),
-            contentAlignment = Alignment.BottomStart
-        ) {
-            Text(subject, style = TextStyle(color = Color.Black, fontSize = 16.sp))
-        }
-
-         */
     }
 }
 
