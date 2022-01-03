@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
             }*/
             Navigation()
 
-            val painter = painterResource(id = R.drawable.background1)
+            val painter = painterResource(id = R.drawable.background1) // For designed background
 
             //MainMenu(painter = painter)
 
