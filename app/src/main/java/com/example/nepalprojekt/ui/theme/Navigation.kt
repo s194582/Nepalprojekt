@@ -24,5 +24,9 @@ fun Navigation() {
             ) { //entry ->
             Recipes(navController = navController)//name = entry.arguments?.getString("name"))
         }
+        composable(route = Screen.HealthInfoChild.route
+        ) {
+            HealthChild(navController = navController)
+        }
     }
 }
