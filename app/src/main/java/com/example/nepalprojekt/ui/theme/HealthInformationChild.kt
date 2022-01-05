@@ -7,10 +7,8 @@ import androidx.compose.animation.core.spring
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.OutlinedButton
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -33,33 +31,38 @@ import org.w3c.dom.Text
 @Composable
 fun HealthChild (
     navController: NavController,
-
+    titles: List<String> = List(1) {"$it"} //listOf("0-6", "6-9", "9-12")
 ) {
-
-
-    Surface (
-        color = MaterialTheme.colors.primary,
-        modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
-    ) {
-        Column(
-            //horizontalAlignment = Alignment.CenterHorizontally,
-            //verticalArrangement = Arrangement.SpaceEvenly
-            modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
-        ) {
-            InfoElement(title = "Zero to Six months", description = ("Composem ipsum color sit lazy, " +
+    LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
+        items(items = titles) { title ->
+            InfoBoxes(title = "title1", description = ("Composem ipsum color sit lazy, " +
                     "padding theme elit, sed do bouncy. ").repeat(4))
-
-            //Spacer(modifier = Modifier.height(10.dp))
-
-            InfoElement(title = "Six to nine months", description = ("Composem ipsum color sit lazy, " +
-                    "padding theme elit, sed do bouncy. ").repeat(4))
+            InfoBoxes(title = "title2", description = "description2")
+            InfoBoxes(title = "title3", description = "description3")
         }
-
     }
-
-
 }
 
+/**
+ * Each box containing health information
+ * In a Card shape, making rounded edges possible
+ */
+@Composable
+fun InfoBoxes (
+    title: String,
+    description: String
+        ) {
+    Card(
+        backgroundColor = MaterialTheme.colors.primary,
+        modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
+    ) {
+        InfoElement(title, description)
+    }
+}
+
+/**
+ * Modifications and animation for each health info element
+ */
 @Composable
 fun InfoElement (
     title: String,
@@ -75,11 +78,13 @@ fun InfoElement (
     )
 
     Row (modifier = Modifier.padding(12.dp)
+
             ) {
         Column (modifier = Modifier
             .weight(1f)
-            .padding(//bottom = extraPadding.coerceAtLeast(0.dp)
-            12.dp )
+            .padding(bottom = extraPadding.coerceAtLeast(0.dp)
+                //12.dp
+            )
         ) {
             Text(title) //Place of title of each element
         }
@@ -91,5 +96,20 @@ fun InfoElement (
         if (expanded.value) {
             Text(description) //Place of description of each element
         }
+
+    /* -----------For info content, instead of OutlinedButton
+        IconButton(onClick = { expanded = !expanded }) {
+            Icon(
+                imageVector = if (expanded) Filled.ExpandLess else Filled.ExpandMore,
+                contentDescription = if (expanded) {
+                    stringResource(R.string.show_less)
+                } else {
+                    stringResource(R.string.show_more)
+                }
+
+            )
+        }
+
+         */
     }
 }
