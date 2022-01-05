@@ -68,13 +68,13 @@ fun MainMenu(
     //painter: Painter,
     modifier: Modifier = Modifier
 ) {
-    var text by remember {
+    /*var text by remember {
         mutableStateOf("")
     }
     TextField(value = text, onValueChange = {text = it})
     Button(onClick = { navController.navigate(Screen.RecipeAdultScreen.route) }) {
         Text(text = "Test going to RecipeScreen")
-    }
+    }*/
     Box(
         modifier = Modifier.fillMaxSize()
     ){
@@ -86,8 +86,7 @@ fun MainMenu(
     Column (modifier = Modifier
         .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.SpaceEvenly,
-
+        verticalArrangement = Arrangement.SpaceEvenly
     ) {
 
         HealthRow(title = "Health Info", subject1 = "Parent", subject2 = "Child", navController = navController)
