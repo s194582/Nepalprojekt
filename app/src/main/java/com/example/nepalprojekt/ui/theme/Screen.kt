@@ -4,4 +4,5 @@ package com.example.nepalprojekt.ui.theme
 sealed class Screen(val route:String) {
     object MainMenu : Screen("main_menu")
     object RecipeAdultScreen : Screen("recipe_adult_screen")
+    object RecipesChildren : Screen("recipes_child")
 }

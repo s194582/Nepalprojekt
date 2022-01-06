@@ -21,7 +21,7 @@ import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun Recipes(
-    navController: NavController
+        navController: NavController
 ) {
     var text by remember {
         mutableStateOf("")
@@ -32,32 +32,32 @@ fun Recipes(
     }
     LazyColumn { //only loads items if scrolled by
         itemsIndexed(
-            listOf(
-                "Recipe 1",
-                "Recipe 2",
-                "Recipe 3",
-                "Recipe 4",
-                "Recipe 5",
-                "Recipe 6",
-                "Recipe 7",
-                "Recipe 8",
-                "Recipe 9",
-                "Recipe 10",
-                "Recipe 11",
-                "Recipe 12",
-                "Recipe 13",
-                "Recipe 14"
-            )
+                listOf(
+                        "Recipe 1",
+                        "Recipe 2",
+                        "Recipe 3",
+                        "Recipe 4",
+                        "Recipe 5",
+                        "Recipe 6",
+                        "Recipe 7",
+                        "Recipe 8",
+                        "Recipe 9",
+                        "Recipe 10",
+                        "Recipe 11",
+                        "Recipe 12",
+                        "Recipe 13",
+                        "Recipe 14"
+                )
         ) { index, string ->
             Button(onClick = { navController.navigate(Screen.MainMenu.route) }) {
                 Text(
-                    text = string,
-                    fontSize = 24.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 24.dp)
+                        text = string,
+                        fontSize = 24.sp,
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(vertical = 24.dp)
                 )
             }
         }
