@@ -21,8 +21,12 @@ fun Navigation() {
             MainMenu(navController = navController)
         }
         composable( route = Screen.RecipeAdultScreen.route //+ "?name={name}",
-            ) { //entry ->
+        ) { //entry ->
             Recipes(navController = navController)//name = entry.arguments?.getString("name"))
+        }
+        composable(route = Screen.RecipeChildren.route
+        ) {
+            HealthChild(navController = navController)
         }
     }
 }
