@@ -29,7 +29,7 @@ import org.w3c.dom.Text
  * https://developer.android.com/codelabs/jetpack-compose-basics?hl=fr#0
  */
 @Composable
-fun HealthChild (
+fun RecipeChild (
         navController: NavController,
         titles: List<String> = List(1) {"$it"} //listOf("0-6", "6-9", "9-12")
 ) {
