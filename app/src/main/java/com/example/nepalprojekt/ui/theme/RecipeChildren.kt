@@ -1,5 +1,7 @@
 package com.example.nepalprojekt.ui.theme
 
+//Forsøges omskrives til en sidde med knapper.
+
 import android.icu.text.CaseMap
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
