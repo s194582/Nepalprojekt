@@ -1,6 +1,7 @@
 package com.example.nepalprojekt.ui.theme
 
 import android.icu.text.CaseMap
+import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.spring
@@ -69,22 +70,28 @@ fun InfoElement (
     description: String
     ) {
     var expanded = rememberSaveable { mutableStateOf(false) } //rememberSaveable keeps expanded elements expanded
-    val extraPadding by animateDpAsState( //animates extraPadding, also animateDpAsState is interuptible
+
+    /*val extraPadding by animateDpAsState( //animates extraPadding, also animateDpAsState is interuptible
         if (expanded.value) 48.dp else 0.dp,
         animationSpec = spring(
             dampingRatio = Spring.DampingRatioMediumBouncy,
             stiffness = Spring.StiffnessLow
         )
     )
+     */
 
-    Row (modifier = Modifier.padding(12.dp)
-
-            ) {
+    Row (modifier = Modifier
+        .padding(12.dp)
+        .animateContentSize( //animateContentSize automates the process of creating the animation (replaces extraPadding)
+            animationSpec = spring(
+                dampingRatio = Spring.DampingRatioMediumBouncy,
+                stiffness = Spring.StiffnessLow
+            )
+        )
+    ) {
         Column (modifier = Modifier
             .weight(1f)
-            .padding(bottom = extraPadding.coerceAtLeast(0.dp)
-                //12.dp
-            )
+            .padding(12.dp)
         ) {
             Text(title) //Place of title of each element
         }
