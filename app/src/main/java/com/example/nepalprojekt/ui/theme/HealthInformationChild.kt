@@ -10,19 +10,21 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.coerceAtLeast
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.nepalprojekt.R
 import org.w3c.dom.Text
 
 /**
@@ -36,10 +38,10 @@ fun HealthChild (
 ) {
     LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
         items(items = titles) { title ->
-            InfoBoxes(title = "title1", description = ("Composem ipsum color sit lazy, " +
-                    "padding theme elit, sed do bouncy. ").repeat(4))
-            InfoBoxes(title = "title2", description = "description2")
-            InfoBoxes(title = "title3", description = "description3")
+            InfoBoxes(title = "० - ६ महिना", description = (
+                    stringResource(id = R.string.zero_six_the_child_should_be_examined))) //0-6 months
+            InfoBoxes(title = "०- ९ महिना", description = "description2") // 6-9 months
+            InfoBoxes(title = "९ - १२ महिना", description = "description3") // 9-12 months
         }
     }
 }
@@ -69,7 +71,7 @@ fun InfoElement (
     title: String,
     description: String
     ) {
-    var expanded = rememberSaveable { mutableStateOf(false) } //rememberSaveable keeps expanded elements expanded
+    var expanded by remember { mutableStateOf(false) } //rememberSaveable keeps expanded elements expanded
 
     /*val extraPadding by animateDpAsState( //animates extraPadding, also animateDpAsState is interuptible
         if (expanded.value) 48.dp else 0.dp,
@@ -94,29 +96,35 @@ fun InfoElement (
             .padding(12.dp)
         ) {
             Text(title) //Place of title of each element
+
+            if (expanded) {
+                Text(description) //Place of description of each element
+            }
         }
-        OutlinedButton(
+
+        /*OutlinedButton(
             onClick = { expanded.value = !expanded.value }
         ) {
             Text(if (expanded.value) "Show less" else "Show more")
-        }
-        if (expanded.value) {
-            Text(description) //Place of description of each element
-        }
+        }*/
 
-    /* -----------For info content, instead of OutlinedButton
+
+    // -----------IconButton, instead of OutlinedButton
         IconButton(onClick = { expanded = !expanded }) {
             Icon(
-                imageVector = if (expanded) Filled.ExpandLess else Filled.ExpandMore,
-                contentDescription = if (expanded) {
+                imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
+
+                /*contentDescription = if (expanded) {
+                    Text(description) //Place of description of each element
+                }
+                 */
+
+                contentDescription = if (expanded) { //String resources needed to make Icon work. Isn't shown in app.
                     stringResource(R.string.show_less)
                 } else {
                     stringResource(R.string.show_more)
                 }
-
             )
         }
-
-         */
     }
 }
