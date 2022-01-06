@@ -77,10 +77,10 @@ fun InfoElement (
             )
     )
 
-    Row (modifier = Modifier.padding(12.dp)
+    Row(modifier = Modifier.padding(12.dp)
 
     ) {
-        Column (modifier = Modifier
+        Column(modifier = Modifier
                 .weight(1f)
                 .padding(bottom = extraPadding.coerceAtLeast(0.dp)
                         //12.dp
@@ -112,3 +112,4 @@ fun InfoElement (
 
              */
     }
+}
