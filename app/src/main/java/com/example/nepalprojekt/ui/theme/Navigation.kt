@@ -26,7 +26,7 @@ fun Navigation() {
         }
         composable(route = Screen.RecipeChildren.route
         ) {
-            RecipeChild(navController = navController)
+            RecipeListChildren(navController = navController)
         }
     }
 }
