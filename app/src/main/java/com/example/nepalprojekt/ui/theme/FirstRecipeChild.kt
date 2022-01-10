@@ -27,7 +27,7 @@ fun ZeroSix () {
             .padding(12.dp)
         ) {
             // Picture of healthpost
-            Image(painter = painterResource(id = R.drawable.her_går_det_godt),
+            Image(painter = painterResource(id = R.drawable.meme),
                 contentDescription = stringResource(id = R.string.herGårDetGodt),
                 //contentScale = ContentScale.Crop
             )
