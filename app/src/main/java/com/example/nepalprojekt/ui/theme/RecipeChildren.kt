@@ -29,8 +29,35 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.nepalprojekt.ButtonElement
+import com.example.nepalprojekt.HealthRow
+import com.example.nepalprojekt.RecipeRow
 import org.w3c.dom.Text
 
+
+@Composable
+fun RecipeListChildren(
+    navController: NavController,
+    //painter: Painter,
+    modifier: Modifier = Modifier
+) {
+
+    Box(
+        modifier = Modifier.fillMaxSize()
+    ){
+    }
+    Column (modifier = Modifier
+        .fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceEvenly
+    ) {
+
+        /*HealthRow(title = "Health Info", subject1 = "Parent", subject2 = "Child", navController = navController)
+        RecipeRow(title = "Recipes", subject1 = "Parent", subject2 = "Child", navController = navController)
+        */
+    }
+}
+
+/*
 @Composable
 fun RecipeChild( // Box containing two buttons for health info
         navController: NavController,
@@ -76,4 +103,4 @@ fun RecipeChild( // Box containing two buttons for health info
             }
         }
     }
-}
+}*/
