@@ -27,12 +27,12 @@ fun ZeroSix () {
             .padding(12.dp)
         ) {
             // Picture of healthpost
-            Image(painter = painterResource(id = R.drawable.HerGårDetGodt),
+            Image(painter = painterResource(id = R.drawable.her_går_det_godt),
                 contentDescription = stringResource(id = R.string.herGårDetGodt),
                 //contentScale = ContentScale.Crop
             )
             // The child should be examined at the health institution on the third day within 24 hours of birth and at 4 months.
-            Text(stringResource(id = R.string.herGårDetGodt))
+            //Text(stringResource(id = R.string.herGårDetGodt))
 
             /*
             // OBS! Blue on the spreadsheet, might mean picture is missing
