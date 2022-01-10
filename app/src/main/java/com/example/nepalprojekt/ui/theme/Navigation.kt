@@ -17,7 +17,8 @@ import com.example.nepalprojekt.MainMenu
 fun Navigation() {
     val navController = rememberNavController() //Creating NavController, the central API for the Navigation component
     NavHost(navController = navController, startDestination = Screen.MainMenu.route) {
-        composable(route = Screen.MainMenu.route) {
+        composable(route = Screen.MainMenu.route
+        ) {
             MainMenu(navController = navController)
         }
         composable( route = Screen.RecipeAdultScreen.route //+ "?name={name}",
