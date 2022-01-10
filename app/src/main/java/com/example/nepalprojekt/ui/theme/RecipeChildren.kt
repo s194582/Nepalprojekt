@@ -54,12 +54,10 @@ fun RecipeListChildren(
         /*HealthRow(title = "Health Info", subject1 = "Parent", subject2 = "Child", navController = navController)
         RecipeRow(title = "Recipes", subject1 = "Parent", subject2 = "Child", navController = navController)
         */
-        Recipe1(title = "Recipe 1", Recipe1 = "Parent", Test1 = "Child", navController = navController)
-        RecipeColumn(title = "Recipe 2", Recipe2 = "Parent", Recipe3 = "Child", navController = navController)
-        RecipeColumn(title = "Recipe 3", Recipe3 = "Parent", Recipe4 = "Child", navController = navController)
-        RecipeColumn(title = "Recipe 4", Recipe4 = "Parent", Recipe1 = "Child", navController = navController)
-
-
+        Recipe1(title = "Recipe 1", Recipe1 = "See Recipe", Test1 = "Child", navController = navController)
+        Recipe2(title = "Recipe 2", Recipe2 = "See Recipe", Test2 = "Child", navController = navController)
+        Recipe3(title = "Recipe 3", Recipe3 = "See Recipe", Test3 = "Child", navController = navController)
+        Recipe4(title = "Recipe 4", Recipe4 = "See Recipe", Test4 = "Child", navController = navController)
     }
 }
 
@@ -97,6 +95,107 @@ fun Recipe1(
     }
 }
 
+@Composable
+fun Recipe2(
+    navController: NavController,
+    title: String,
+    Recipe2: String,
+    Test2: String,
+) {
+    Card( // for rounded shape
+        shape = RoundedCornerShape(10.dp), //rounded corners of outer box
+        modifier = Modifier
+            .padding(10.dp), //around outer box
+        elevation = 20.dp //still don't know what it does
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.SpaceEvenly
+        ) {
+            Text(
+                title,
+                style = TextStyle(
+                    color = Color.Black,
+                    fontSize = 18.sp,
+                    textAlign = TextAlign.Center
+                )//.offset(40.dp, 40.dp))
+            )
+            Spacer(modifier = Modifier.height(10.dp))
+
+            ButtonElement(subject = Recipe2) {
+                navController.navigate(Screen.RecipeAdultScreen.route)
+            }
+        }
+    }
+}
+
+@Composable
+fun Recipe3(
+    navController: NavController,
+    title: String,
+    Recipe3: String,
+    Test3: String,
+) {
+    Card( // for rounded shape
+        shape = RoundedCornerShape(10.dp), //rounded corners of outer box
+        modifier = Modifier
+            .padding(10.dp), //around outer box
+        elevation = 20.dp //still don't know what it does
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.SpaceEvenly
+        ) {
+            Text(
+                title,
+                style = TextStyle(
+                    color = Color.Black,
+                    fontSize = 18.sp,
+                    textAlign = TextAlign.Center
+                )//.offset(40.dp, 40.dp))
+            )
+            Spacer(modifier = Modifier.height(10.dp))
+
+            ButtonElement(subject = Recipe3) {
+                navController.navigate(Screen.RecipeAdultScreen.route)
+            }
+        }
+    }
+}
+
+@Composable
+fun Recipe4(
+    navController: NavController,
+    title: String,
+    Recipe4: String,
+    Test4: String,
+) {
+    Card( // for rounded shape
+        shape = RoundedCornerShape(10.dp), //rounded corners of outer box
+        modifier = Modifier
+            .padding(10.dp), //around outer box
+        elevation = 20.dp //still don't know what it does
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.SpaceEvenly
+        ) {
+            Text(
+                title,
+                style = TextStyle(
+                    color = Color.Black,
+                    fontSize = 18.sp,
+                    textAlign = TextAlign.Center
+                )//.offset(40.dp, 40.dp))
+            )
+            Spacer(modifier = Modifier.height(10.dp))
+
+            ButtonElement(subject = Recipe4) {
+                navController.navigate(Screen.RecipeAdultScreen.route)
+            }
+        }
+    }
+}
 
 /*
 @Composable
