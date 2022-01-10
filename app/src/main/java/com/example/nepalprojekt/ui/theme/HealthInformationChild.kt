@@ -41,14 +41,17 @@ fun HealthChild (
 ) {
     Column(modifier = Modifier.padding(vertical = 4.dp)) {
         InfoBoxes(title = "० - ६ महिना", description = "description1") {
-            navController.navigate(Screen.MainMenu.route)
+            navController.navigate(Screen.ZeroSix.route)
         } // 0-6 months
         InfoBoxes(title = "६ - ९ महिना", description = "description2") {
-            navController.navigate(Screen.MainMenu.route)
+            navController.navigate(Screen.SixNine.route)
         } // 6-9 months
         InfoBoxes(title = "९ - १२ महिना", description = "description3") {
-            navController.navigate(Screen.MainMenu.route)
+            navController.navigate(Screen.NineTwelve.route)
         } // 9-12 months
+        InfoBoxes(title = "१२ - २४ महिना", description = "description4") {
+            navController.navigate(Screen.TwelveTwentyFour.route)
+        } // 12-24 months
     }
 
     /*LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {

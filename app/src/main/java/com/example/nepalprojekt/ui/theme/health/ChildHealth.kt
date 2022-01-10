@@ -5,10 +5,12 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -17,13 +19,29 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.nepalprojekt.R
+import com.example.nepalprojekt.ui.theme.Screen
 
 val spaceBetweenChildren = 12.dp
 
+@Composable
+fun BackButton (
+    onClick: () -> Unit
+) {
+    IconButton(onClick = onClick) {
+        Icon(
+            imageVector = Icons.Filled.ExpandLess,
+            contentDescription = ""
+        )
+    }
+}
+
 //@Preview
 @Composable
-fun ZeroSix () {
+fun ZeroSix (
+    navController: NavController
+) {
     Card(
         backgroundColor = MaterialTheme.colors.primary,
         modifier = Modifier
@@ -35,6 +53,7 @@ fun ZeroSix () {
             verticalArrangement = Arrangement.spacedBy(spaceBetweenChildren),
             modifier = Modifier
                 .padding(12.dp) //.weight(1f)
+                .verticalScroll(rememberScrollState())
         ) {
             // Picture of healthpost
             Image(painter = painterResource(id = R.drawable.hc1_go_to_healthpost),
@@ -65,13 +84,19 @@ fun ZeroSix () {
             /* TODO: Revisit, as the following might get left out */
             // Feeding the child 6 months of age and additional vitamin A capsules and parasite medicine every 6-6 months.
             Text(stringResource(id = R.string.zero_six_feeding_the_child_6_months))
+
+            BackButton() {
+                navController.navigate(Screen.HealthInfoChild.route)
+            }
         }
     }
 }
 
-@Preview
+//@Preview
 @Composable
-fun SixNine () {
+fun SixNine (
+    navController: NavController
+) {
     Card(
         backgroundColor = MaterialTheme.colors.primary,
         modifier = Modifier
@@ -82,6 +107,7 @@ fun SixNine () {
             verticalArrangement = Arrangement.spacedBy(spaceBetweenChildren),
             modifier = Modifier
                 .padding(12.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             // Picture of health post, same as 0-6
             Image(painter = painterResource(id = R.drawable.hc1_go_to_healthpost),
@@ -120,13 +146,19 @@ fun SixNine () {
                 contentDescription = "salt logo")
             // Only salt with two children logo should be used when preparing food.
             Text(stringResource(id = R.string.six_nine_only_salt))
+
+            BackButton() {
+                navController.navigate(Screen.HealthInfoChild.route)
+            }
         }
     }
 }
 
 /* TODO: Revisit for changes in translations */
 @Composable
-fun NineTwelve () {
+fun NineTwelve (
+    navController: NavController
+) {
     Card(
         backgroundColor = MaterialTheme.colors.primary,
         modifier = Modifier
@@ -137,6 +169,7 @@ fun NineTwelve () {
             verticalArrangement = Arrangement.spacedBy(spaceBetweenChildren),
             modifier = Modifier
                 .padding(12.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             /* Picture of
             Image(painter = painterResource(id = R.drawable.),
@@ -145,13 +178,19 @@ fun NineTwelve () {
             Text(stringResource(id = R.string.))
 
              */
+
+            BackButton() {
+                navController.navigate(Screen.HealthInfoChild.route)
+            }
         }
     }
 }
 
 /* TODO: Revisit for changes in translations */
 @Composable
-fun TwelveTwentyfour () {
+fun TwelveTwentyfour (
+    navController: NavController
+) {
     Card(
         backgroundColor = MaterialTheme.colors.primary,
         modifier = Modifier
@@ -162,6 +201,7 @@ fun TwelveTwentyfour () {
             verticalArrangement = Arrangement.spacedBy(spaceBetweenChildren),
             modifier = Modifier
                 .padding(12.dp)
+                .verticalScroll(rememberScrollState())
         ) {
             /* Picture of
             Image(painter = painterResource(id = R.drawable.),
@@ -170,6 +210,10 @@ fun TwelveTwentyfour () {
             Text(stringResource(id = R.string.))
 
              */
+
+            BackButton() {
+                navController.navigate(Screen.HealthInfoChild.route)
+            }
         }
     }
 }
