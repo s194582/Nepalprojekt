@@ -1,6 +1,6 @@
 package com.example.nepalprojekt.ui.theme
 
-/*import androidx.compose.foundation.Image
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Card
@@ -28,13 +28,13 @@ fun ZeroSix () {
         ) {
             // Picture of healthpost
             Image(painter = painterResource(id = R.drawable.HerGårDetGodt),
-                contentDescription = stringResource(id = R.string.),
+                contentDescription = stringResource(id = R.string.herGårDetGodt),
                 //contentScale = ContentScale.Crop
             )
             // The child should be examined at the health institution on the third day within 24 hours of birth and at 4 months.
-            Text(stringResource(id = R.string.))
+            Text(stringResource(id = R.string.herGårDetGodt))
 
-
+            /*
             // OBS! Blue on the spreadsheet, might mean picture is missing
             // The first yellow milk of the mother should be fed as soon as possible (within 1 hour) after the birth of the newborn baby.
             Text(stringResource(id = R.string.zero_six_the_first_yellow_milk))
