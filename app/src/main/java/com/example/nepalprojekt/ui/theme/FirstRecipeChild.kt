@@ -1,6 +1,6 @@
 package com.example.nepalprojekt.ui.theme
 
-import androidx.compose.foundation.Image
+/*import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Card
@@ -28,11 +28,11 @@ fun ZeroSix () {
         ) {
             // Picture of healthpost
             Image(painter = painterResource(id = R.drawable.HerGårDetGodt),
-                contentDescription = stringResource(id = R.string.TestTekstTilTestBillede),
+                contentDescription = stringResource(id = R.string.),
                 //contentScale = ContentScale.Crop
             )
             // The child should be examined at the health institution on the third day within 24 hours of birth and at 4 months.
-            Text(stringResource(id = R.string.zero_six_the_child_should_be_examined))
+            Text(stringResource(id = R.string.))
 
 
             // OBS! Blue on the spreadsheet, might mean picture is missing
@@ -66,4 +66,4 @@ fun ZeroSix () {
 
     }
 
-}
+}*/
