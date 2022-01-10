@@ -93,59 +93,8 @@ fun MainMenu(
         RecipeRow(title = "Recipes", subject1 = "Parent", subject2 = "Child", navController = navController)
 
     }
-
-
 }
-/*
-@Composable
-fun MainMenuRow( // Grøn box
-    navController: NavController,
-    title: String,
-    subject1: String,
-    subject2: String,
-    //modifier: Modifier = Modifier
-) {
-    Card(
-        shape = RoundedCornerShape(10.dp), //rounded corners of outer box
-        modifier = Modifier
-            .padding(10.dp), //around outer box
-        elevation = 20.dp //still don't know what it does
-    ) {
-        Box (
-            modifier = Modifier
-                .background(Color.Green)
-                .padding(10.dp) //between inner and outer box
-        ){
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.SpaceEvenly) {
-                Text(title,
-                    style = TextStyle(
-                        color = Color.Black,
-                        fontSize = 18.sp,
-                        textAlign = TextAlign.Center)//.offset(40.dp, 40.dp))
-                )
-                Spacer(modifier = Modifier.height(10.dp))
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceEvenly,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    MainMenuElement(
-                        subject = subject1,
-                        navController = navController
-                    )
-                    MainMenuElement(
-                        subject = subject2,
-                        navController = navController
-                    )
-                }
-            }
-        }
-    }
-}
-*/
+
 /**
  * Health info
  */
