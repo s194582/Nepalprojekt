@@ -61,9 +61,9 @@ fun ZeroSix () {
 
             // OBS! Might get deleted
             // Feeding the child 6 months of age and additional vitamin A capsules and parasite medicine every 6-6 months.
-            Text(stringResource(id = R.string.zero_six_feeding_the_child_6_months))
+            Text(stringResource(id = R.string.zero_six_feeding_the_child_6_months))*/
         }
 
     }
 
-}*/
+}
