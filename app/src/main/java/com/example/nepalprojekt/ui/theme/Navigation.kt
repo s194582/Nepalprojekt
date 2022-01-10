@@ -1,13 +1,9 @@
 package com.example.nepalprojekt.ui.theme
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavHost
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-//import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
-import com.example.nepalprojekt.MainActivity
 import com.example.nepalprojekt.MainMenu
 import com.example.nepalprojekt.ui.theme.health.NineTwelve
 import com.example.nepalprojekt.ui.theme.health.SixNine

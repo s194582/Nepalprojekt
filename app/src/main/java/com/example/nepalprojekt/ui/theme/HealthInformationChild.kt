@@ -36,8 +36,7 @@ import org.w3c.dom.Text
  */
 @Composable
 fun HealthChild (
-    navController: NavController,
-    //titles: List<String> = List(1) {"$it"} //listOf("0-6", "6-9", "9-12")
+    navController: NavController
 ) {
     Column(modifier = Modifier.padding(vertical = 4.dp)) {
         InfoBoxes(title = "० - ६ महिना", description = "description1") {
@@ -53,22 +52,7 @@ fun HealthChild (
             navController.navigate(Screen.TwelveTwentyFour.route)
         } // 12-24 months
     }
-
-    /*LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
-        items(items = titles) { title ->
-            InfoBoxes(title = "० - ६ महिना", description = "description")
-            //(stringResource(id = R.string.zero_six_the_child_should_be_examined))
-                //, function = ZeroSix()) //0-6 months
-            //InfoBoxes(title = "०- ९ महिना", description = "SixNine()", function = SixNine()) // 6-9 months
-
-            //InfoBoxes(title = "९ - १२ महिना", description = "description3", function = ZeroSix()) // 9-12 months
-
-        }
-    }
-
-     */
 }
-
 
 /**
  * Each box containing health information
@@ -122,11 +106,6 @@ fun InfoElement(
                 Icon(
                     imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
 
-                    /*contentDescription = if (expanded) {
-                        Text(description) //Place of description of each element
-                    }
-                     */
-
                     contentDescription = (if (expanded) { //String resources needed to make Icon work. Isn't shown in app.
                         stringResource(R.string.show_less)
                     } else {
@@ -134,86 +113,6 @@ fun InfoElement(
                     })
                 )
             }
-
-
-        }
-
-        /*OutlinedButton(
-            onClick = { expanded.value = !expanded.value }
-        ) {
-            Text(if (expanded.value) "Show less" else "Show more")
-        }*/
-
-        // -----------IconButton, instead of OutlinedButton
-
-    }
-}
-
-/*@Composable
-fun InfoElement(
-    navController: NavController,
-    title: String,
-    description: String
-) {
-    var expanded by remember { mutableStateOf(false) } //rememberSaveable keeps expanded elements expanded
-*/
-    /*val extraPadding by animateDpAsState( //animates extraPadding, also animateDpAsState is interuptible
-        if (expanded.value) 48.dp else 0.dp,
-        animationSpec = spring(
-            dampingRatio = Spring.DampingRatioMediumBouncy,
-            stiffness = Spring.StiffnessLow
-        )
-    )
-     */
-
-/*    Row (modifier = Modifier
-        .padding(12.dp)
-        .animateContentSize( //animateContentSize automates the process of creating the animation (replaces extraPadding)
-            animationSpec = spring(
-                dampingRatio = Spring.DampingRatioMediumBouncy,
-                stiffness = Spring.StiffnessLow
-            )
-        )
-    ) {
-        Column (modifier = Modifier
-            .weight(1f)
-            .padding(12.dp)
-        ) {
-            Text(title) //Place of title of each element
-
-            if (expanded) {
-                Text(description) //Place of description of each element
-            }
-
-            //description = if (expanded) {function} else {}
-        }
-*/
-        /*OutlinedButton(
-            onClick = { expanded.value = !expanded.value }
-        ) {
-            Text(if (expanded.value) "Show less" else "Show more")
-        }*/
-
-    // -----------IconButton, instead of OutlinedButton
-/*        IconButton(onClick = { expanded = !expanded }) {
-            Icon(
-                imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
-
-                /*contentDescription = if (expanded) {
-                    Text(description) //Place of description of each element
-                }
-                 */
-
-                contentDescription = (if (expanded) { //String resources needed to make Icon work. Isn't shown in app.
-                    stringResource(R.string.show_less)
-                } else {
-                    stringResource(R.string.show_more)
-                })
-            )
-
-
         }
     }
 }
-
-*/
