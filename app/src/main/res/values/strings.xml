@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Nepalprojekt</string>
+    <string name="show_less">Show less</string>
+    <string name="show_more">Show more</string>
+
+    <string name="zero_six_the_child_should_be_examined">बच्चा जन्मेको २४ घण्टा मा तेस्रो दिनमा र ४ महिनामा स्वास्थ संस्था मा गई जाँच गराउनु पर्छ।</string>"
+    <string name="zero_six_from_birth_to_6_months"> जन्मिए देखि ६ महिना सम्म शिशु लाई आमाको दुध मात्र हुने हुँदा पानी पनि खुवाउनु पर्दैन।</string>"
+    <string name="zero_six_starting_breastfeeding_as_soon">जन्मने बित्तिकै स्तनपान सुरु गराउने ले दूध लगातार आइरहन मद्दत गर्दछ। </string>"
+    <string name="zero_six_newborns_should_be_breastfeed">नवजात शिशुलाई दिन र रातमा गरी कम्तीमा पनि १० दिन १२ पटक सम्म आमाको दुध मात्र खुवाउनुपर्छ</string>"
+    <string name="zero_six_feed_from_one_breast_only">एउटा स्तनपान बाट निख्रिने गरी खुवाइए पछि मात्र अर्को स्तनपान बाट खुवाउने। </string>"
+    <string name="zero_six_feeding_the_child_6_months">बच्चा ६ महिना काे उमेर पुग्नासाथ र प्रतेक ६-६ महिनामा थप अतिरिक्त भिटामिन ए क्याप्सुल र जुकाको औषधी खुवाउने।</string>"
+
+    <string name="six_nine_after_the_child_reaches">बच्चा ६ महिना र ९ महिना पुगे पछी स्वास्थ संस्थामा गई जाँच गराउने । </string>
+    <string name="six_nine_after_the_completion">६ महिना पुरा (१८० दिन ) भएपछि फरक खानाका साथै आमाको दूध दुई वर्ष पूरा नभए सम्म खुवाउनु पर्छ। </string>
+    <string name="six_nine_when_starting_different">फरक खाना खुवाउन सुरु गर्दा एक पटकमा २ देखि ३ ठूलो चम्चा खुवाउने र पछि १ पटकमा १ चिया गलस (१२५ एम एल ) सम्म बढाउँदै जाने ।</string>
+    <string name="six_nine_different_foods_should">फरक खाना दैनिक कम्तीमा ४ समूहको खाना मिसाएर बनाउनुपर्छ ( अन्न, गेडागुडी , पशुपन्छी जन्य खानेकुराहरू , फलफूलहरू तथा तरकारीहरू ) । </string>
+    <string name="six_nine_always_use_boiled">पानी सधैं सफा वा उमालेर मात्र प्रयोग गर्नु पर्छ।</string>
+    <string name="six_nine_wash_hands_thoroughly">खाना बनाउनु अघि र खुवाउनु पछि राम्रो सँग साबुन पानीले हात धुने।</string>
+    <string name="six_nine_only_salt">खाना तयार गर्दा दुई बालबालिकाको चिन्न भएको नुनको मात्र प्रयोग गर्नु पर्छ।</string>
+
+    <string name="nine_twelve_"></string>
+
+    <string name="twelve_twentyfour"></string>
 </resources>
