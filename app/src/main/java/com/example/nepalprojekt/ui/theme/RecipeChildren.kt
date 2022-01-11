@@ -89,7 +89,7 @@ fun Recipe1(
             Spacer(modifier = Modifier.height(10.dp))
 
             ButtonElement(subject = Recipe1) {
-                navController.navigate(Screen.RecipeAdultScreen.route)
+                navController.navigate(Screen.FirstRecipeChild.route)
             }
         }
     }
@@ -123,7 +123,7 @@ fun Recipe2(
             Spacer(modifier = Modifier.height(10.dp))
 
             ButtonElement(subject = Recipe2) {
-                navController.navigate(Screen.RecipeAdultScreen.route)
+                navController.navigate(Screen.SecondRecipeChild.route)
             }
         }
     }
@@ -157,7 +157,7 @@ fun Recipe3(
             Spacer(modifier = Modifier.height(10.dp))
 
             ButtonElement(subject = Recipe3) {
-                navController.navigate(Screen.RecipeAdultScreen.route)
+                navController.navigate(Screen.ThirdRecipeChild.route)
             }
         }
     }
@@ -191,7 +191,7 @@ fun Recipe4(
             Spacer(modifier = Modifier.height(10.dp))
 
             ButtonElement(subject = Recipe4) {
-                navController.navigate(Screen.RecipeAdultScreen.route)
+                navController.navigate(Screen.FourthRecipeChild.route)
             }
         }
     }
