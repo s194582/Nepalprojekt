@@ -111,7 +111,7 @@ fun HealthRow( // Box containing two buttons for health info
                     ) { navController.navigate(Screen.RecipeAdultScreen.route) } //<-route for onClick for button
                     ButtonElement(
                             subject = subject2
-                    ) { navController.navigate(Screen.RecipeChildren.route) }
+                    ) { navController.navigate(Screen.RecipeAdultScreen.route) }
                 //{ navController.navigate(Screen.RecipeChildren.route) }
                 }
             }
@@ -161,7 +161,7 @@ fun RecipeRow( // Box containing two buttons for recipes
                     ) { navController.navigate(Screen.RecipeAdultScreen.route) }
                     ButtonElement(
                             subject = subject2
-                    ) { navController.navigate(Screen.RecipeAdultScreen.route) }
+                    ) { navController.navigate(Screen.RecipeChildren.route) }
                 }
             }
         }
