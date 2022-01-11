@@ -21,21 +21,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.nepalprojekt.R
+import com.example.nepalprojekt.ui.theme.BackButton
 import com.example.nepalprojekt.ui.theme.Screen
-
-val spaceBetweenChildren = 12.dp
-
-@Composable
-fun BackButton (
-    onClick: () -> Unit
-) {
-    IconButton(onClick = onClick) {
-        Icon(
-            imageVector = Icons.Filled.ExpandLess,
-            contentDescription = ""
-        )
-    }
-}
+import com.example.nepalprojekt.ui.theme.spaceBetweenChildren
 
 //@Preview
 @Composable

@@ -28,4 +28,11 @@
     <string name="nine_twelve_"></string>
 
     <string name="twelve_twentyfour"></string>
+
+    <string name="pregnancy">गर्भावस्था</string>
+    <string name="pregnancy_regular_health_check_ups">कम्तीमा ४ पटक ( ४,६,८,९ महिना ) स्वास्थ संस्थामा गएर नियमित स्वास्थ जाँच गराउनुपर्दछ र टी टी खोप लगाउनुपर्दछ। </string>
+    <string name="pregnancy_after_3_months">गर्भवती भएको ३ महिना पुरा भए पछि स्वास्थ संस्थामा गई जुकाको औषधि खानु पर्दछ। </string>
+    <string name="pregnancy_eat_at_least">हरेक दिन कम्तीमा चार प्रकारका खानेकुराहरू ( अन्न तथा कन्दमूल, गेडागुडी , सागपात तथा पशुपन्छी जन्य श्रोत जस्तै ( दूध, अण्डा , माछा , मासु ) समेटिने गरी खानुपर्छ। </string>
+    <string name="pregnancy_from_the_first">गर्भवती भएको ३ महिना पुरा भए देखि सुत्केरी भएको ४५ दिनसम्म एक पटक १ चक्की आइरन चक्की खानु पर्दछ।</string>
+    <string name="pregnancy_get_enough_rest">पर्याप्त आराम गर्नु पर्छ । धेरै कडा परिश्रम पर्ने काम गर्नु हुँदैन , गर्हो समान उचाल्नु हुँदैन र कामको बीच बीचमा आराम गर्नु पर्दछ। </string>
 </resources>

@@ -21,7 +21,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.nepalprojekt.R
+import com.example.nepalprojekt.ui.theme.BackButton
 import com.example.nepalprojekt.ui.theme.Screen
+import com.example.nepalprojekt.ui.theme.spaceBetweenChildren
 
 //@Preview
 @Composable
