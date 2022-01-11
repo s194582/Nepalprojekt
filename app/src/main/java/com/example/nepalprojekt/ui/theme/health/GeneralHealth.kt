@@ -27,13 +27,14 @@ import com.example.nepalprojekt.ui.theme.spaceBetweenChildren
 
 //@Preview
 @Composable
-fun ZeroSix (
+fun a (
     navController: NavController
 ) {
     Card(
         backgroundColor = MaterialTheme.colors.primary,
         modifier = Modifier
             .padding(vertical = 4.dp, horizontal = 8.dp)
+        //.verticalScroll(enabled = true)
     ) {
         Column (
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -44,7 +45,8 @@ fun ZeroSix (
         ) {
             // Picture of healthpost
             Image(painter = painterResource(id = R.drawable.hc1_go_to_healthpost),
-                contentDescription = "go_to_healthpost"
+                contentDescription = "go_to_healthpost",
+                //contentScale = ContentScale.Crop
             )
             // The child should be examined at the health institution on the third day within 24 hours of birth and at 4 months.
             Text(stringResource(id = R.string.zero_six_the_child_should_be_examined))
@@ -80,7 +82,7 @@ fun ZeroSix (
 
 //@Preview
 @Composable
-fun SixNine (
+fun b (
     navController: NavController
 ) {
     Card(
@@ -142,7 +144,7 @@ fun SixNine (
 
 /* TODO: Revisit for changes in translations */
 @Composable
-fun NineTwelve (
+fun c (
     navController: NavController
 ) {
     Card(
@@ -174,7 +176,7 @@ fun NineTwelve (
 
 /* TODO: Revisit for changes in translations */
 @Composable
-fun TwelveTwentyfour (
+fun d (
     navController: NavController
 ) {
     Card(

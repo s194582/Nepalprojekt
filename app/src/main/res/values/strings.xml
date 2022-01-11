@@ -3,6 +3,13 @@
     <string name="show_less">Show less</string>
     <string name="show_more">Show more</string>
 
+    <string name="health_information">स्वास्थ जानकारी</string>
+    <string name="recipes">व्यञ्जनहरु</string>
+    <string name="general_information">सामान्य जानकारी</string>
+    <string name="mothers">आमाहरू</string>
+    <string name="pregnant_woman">गर्भवती महिला</string>
+    <string name="children">बच्चाहरु</string>
+
     <string name="zero_six_the_child_should_be_examined">बच्चा जन्मेको २४ घण्टा मा तेस्रो दिनमा र ४ महिनामा स्वास्थ संस्था मा गई जाँच गराउनु पर्छ।</string>"
     <string name="zero_six_from_birth_to_6_months"> जन्मिए देखि ६ महिना सम्म शिशु लाई आमाको दुध मात्र हुने हुँदा पानी पनि खुवाउनु पर्दैन।</string>"
     <string name="zero_six_starting_breastfeeding_as_soon">जन्मने बित्तिकै स्तनपान सुरु गराउने ले दूध लगातार आइरहन मद्दत गर्दछ। </string>"
@@ -21,4 +28,40 @@
     <string name="nine_twelve_"></string>
 
     <string name="twelve_twentyfour"></string>
+
+    <string name="pregnancy">गर्भावस्था</string>
+    <string name="pregnancy_regular_health_check_ups">कम्तीमा ४ पटक ( ४,६,८,९ महिना ) स्वास्थ संस्थामा गएर नियमित स्वास्थ जाँच गराउनुपर्दछ र टी टी खोप लगाउनुपर्दछ। </string>
+    <string name="pregnancy_after_3_months">गर्भवती भएको ३ महिना पुरा भए पछि स्वास्थ संस्थामा गई जुकाको औषधि खानु पर्दछ। </string>
+    <string name="pregnancy_eat_at_least">हरेक दिन कम्तीमा चार प्रकारका खानेकुराहरू ( अन्न तथा कन्दमूल, गेडागुडी , सागपात तथा पशुपन्छी जन्य श्रोत जस्तै ( दूध, अण्डा , माछा , मासु ) समेटिने गरी खानुपर्छ। </string>
+    <string name="pregnancy_from_the_first">गर्भवती भएको ३ महिना पुरा भए देखि सुत्केरी भएको ४५ दिनसम्म एक पटक १ चक्की आइरन चक्की खानु पर्दछ।</string>
+    <string name="pregnancy_get_enough_rest">पर्याप्त आराम गर्नु पर्छ । धेरै कडा परिश्रम पर्ने काम गर्नु हुँदैन , गर्हो समान उचाल्नु हुँदैन र कामको बीच बीचमा आराम गर्नु पर्दछ। </string>
+
+    <string name="nutritious_flour">पोषिलो पिठो</string>
+    <string name="how_to_make_nutritious_flour">पोषिलो पिठो बनाउने तरिका</string>
+    <string name="nutritious_flour_recipe_first_four_paragraphs"> पोषिलो पिठो अन्न समूहबाट भिन्न किसिमका २ भाग अन्न \n
+        (चामल, गहुँ, मकै, कोदो, जौ, फापर आदि मध्येबाट १÷भाग) \n
+        र १ भाग गेडागुडी \n
+        (भटमास, चना केराउ मध्ये आदि)
+    </string>
+    <string name="nutritious_flour_recipe_last_paragraph"> पोषिलो पिठो अन्न समूहबाट भिन्न किसिमका २ भाग अन्न \n
+        (चामल, गहुँ, मकै, कोदो, जौ, फापर आदि मध्येबाट १÷भाग) \n
+        र १ भाग गेडागुडी \n
+        (भटमास, चना केराउ मध्ये आदि) \n
+        लाई छुट्टाछुट्टै केलाउने र राम्ररी पाक्ने गरि भुट्ने र छुट्टाछुट्टै पिधेर तयार गरिएको पिठोलाई पकाउँदा साग, गाजर , दूध, घ्यू, मह, अण्डा, मासु, आयोडिनयुक्त नुन मिसाई तयार गर्न सकिन्छ ।
+    </string>
+    <string name="jaulo">जाउलो</string>
+    <string name="jaulo_ingredients"> चमल  २५ ग्राम \n
+        मुंग वा मुसुरो वा रहको वा कालो दाल  ८ ग्राम \n
+        घ्यू वा तेल  ५ ग्राम \n
+        हरिायो सागपात  इच्छा अनुसार
+    </string>
+    <string name="directions">बनाउने तरीकाः</string>
+    <string name="jaulo_directions">  चामल र दाललाई केलाउने । \n
+        चामल र दाललाईमिासएर थोरै पानीले आभा घण्टा सम्म भिजाउने । \n
+        आधा घण्टा पछि थोरै घ्यू र पानी हालेर छोपेर पकाउने ।
+    </string>
+    <string name="jaulo_directions2"> पाक्दै गरेको जाउलोमा पिसेको वा मसिनो पारेर टुक्रा गरेको साग पनि मिसाउने र एकछिन छोपेर पकाउने। \n
+        स्वादको लागि थोरै आयोडिन युक्त नून हाल्ने ।
+    </string>
+
 </resources>

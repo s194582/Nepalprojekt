@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -89,8 +90,14 @@ fun MainMenu(
         verticalArrangement = Arrangement.SpaceEvenly
     ) {
 
-        HealthRow(title = "Health Info", subject1 = "Parent", subject2 = "Child", navController = navController)
-        RecipeRow(title = "Recipes", subject1 = "Parent", subject2 = "Child", navController = navController)
+        HealthRow(title = stringResource(id = R.string.health_information),
+            subject1 = stringResource(id = R.string.general_information),
+            subject2 = stringResource(id = R.string.children),
+            navController = navController)
+        RecipeRow(title = stringResource(id = R.string.recipes),
+            subject1 = "Parent", // Waiting for translation
+            subject2 = stringResource(id = R.string.children),
+            navController = navController)
 
     }
 }
@@ -134,7 +141,7 @@ fun HealthRow( // Box containing two buttons for health info
                 ) {
                     ButtonElement(
                         subject = subject1
-                    ) { navController.navigate(Screen.RecipeAdultScreen.route) } //<-route for onClick for button
+                    ) { navController.navigate(Screen.HealthInfoGeneral.route) } //<-route for onClick for button
                     ButtonElement(
                         subject = subject2
                     ) { navController.navigate(Screen.HealthInfoChild.route) }
@@ -186,7 +193,7 @@ fun RecipeRow( // Box containing two buttons for recipes
                     ) { navController.navigate(Screen.RecipeAdultScreen.route) }
                     ButtonElement(
                         subject = subject2
-                    ) { navController.navigate(Screen.RecipeAdultScreen.route) }
+                    ) { navController.navigate(Screen.RecipesChildScreen.route) }
                 }
             }
         }

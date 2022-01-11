@@ -9,6 +9,7 @@ import com.example.nepalprojekt.ui.theme.health.NineTwelve
 import com.example.nepalprojekt.ui.theme.health.SixNine
 import com.example.nepalprojekt.ui.theme.health.TwelveTwentyfour
 import com.example.nepalprojekt.ui.theme.health.ZeroSix
+import com.example.nepalprojekt.ui.theme.recipes.RecipesChild
 
 /**
  * Navigation inspiration from Philipp Lackner, Jetpack Compose Navigation for Beginners - Android Studio Tutorial,
@@ -21,12 +22,22 @@ fun Navigation() {
         ) {
             MainMenu(navController = navController)
         }
+
+        /** Recipes */
         composable(route = Screen.RecipeAdultScreen.route //+ "?name={name}",
             ) { //entry ->
             Recipes(navController = navController)//name = entry.arguments?.getString("name"))
         }
+        composable(route = Screen.RecipesChildScreen.route
+        ) {
+            RecipesChild(navController = navController)
+        }
 
         /** Health */
+        composable(route = Screen.HealthInfoGeneral.route
+        ) {
+            HealthGeneral(navController = navController)
+        }
         composable(route = Screen.HealthInfoChild.route
         ) {
             HealthChild(navController = navController)
