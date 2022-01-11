@@ -19,7 +19,7 @@ import com.example.nepalprojekt.ui.theme.InfoBoxesExpandable
 @Composable
 fun RecipesChild (
     navController: NavController,
-    titles: List<String> = List(1) {"$it"} //listOf("0-6", "6-9", "9-12")
+    titles: List<String> = List(1) {"$it"}
 ) {
     LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
         items(items = titles) { title ->
