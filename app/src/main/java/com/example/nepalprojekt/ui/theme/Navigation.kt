@@ -24,9 +24,9 @@ fun Navigation() {
         }
 
         /** Recipes */
-        composable(route = Screen.RecipeAdultScreen.route //+ "?name={name}",
-            ) { //entry ->
-            Recipes(navController = navController)//name = entry.arguments?.getString("name"))
+        composable(route = Screen.RecipeAdultScreen.route
+            ) {
+            Recipes(navController = navController)
         }
         composable(route = Screen.RecipesChildScreen.route
         ) {

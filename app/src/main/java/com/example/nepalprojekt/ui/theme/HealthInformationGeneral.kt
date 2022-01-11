@@ -114,15 +114,6 @@ fun InfoElementExpandable(
 ) {
     var expanded by remember { mutableStateOf(false) } //rememberSaveable keeps expanded elements expanded
 
-/*val extraPadding by animateDpAsState( //animates extraPadding, also animateDpAsState is interuptible
-    if (expanded.value) 48.dp else 0.dp,
-    animationSpec = spring(
-        dampingRatio = Spring.DampingRatioMediumBouncy,
-        stiffness = Spring.StiffnessLow
-    )
-)*/
-
-
     Row (modifier = Modifier
         .padding(12.dp)
         .animateContentSize( //animateContentSize automates the process of creating the animation (replaces extraPadding)
@@ -173,25 +164,12 @@ fun InfoElementExpandable(
                     Text(desc5)
                 }
             }
-
-            //description = if (expanded) {function} else {}
         }
-
-/*OutlinedButton(
-    onClick = { expanded.value = !expanded.value }
-) {
-    Text(if (expanded.value) "Show less" else "Show more")
-}*/
 
 // -----------IconButton, instead of OutlinedButton
         IconButton(onClick = { expanded = !expanded }) {
             Icon(
                 imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
-
-                /*contentDescription = if (expanded) {
-                    Text(description) //Place of description of each element
-                }
-                 */
 
                 contentDescription = (if (expanded) { //String resources needed to make Icon work. Isn't shown in app.
                     stringResource(R.string.show_less)

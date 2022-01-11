@@ -157,13 +157,6 @@ fun NineTwelve (
                 .padding(12.dp)
                 .verticalScroll(rememberScrollState())
         ) {
-            /* Picture of
-            Image(painter = painterResource(id = R.drawable.),
-                contentDescription = ""
-            )
-            Text(stringResource(id = R.string.))
-
-             */
 
             BackButton() {
                 navController.navigate(Screen.HealthInfoChild.route)
@@ -189,13 +182,6 @@ fun TwelveTwentyfour (
                 .padding(12.dp)
                 .verticalScroll(rememberScrollState())
         ) {
-            /* Picture of
-            Image(painter = painterResource(id = R.drawable.),
-                contentDescription = ""
-            )
-            Text(stringResource(id = R.string.))
-
-             */
 
             BackButton() {
                 navController.navigate(Screen.HealthInfoChild.route)
