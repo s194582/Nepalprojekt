@@ -14,11 +14,16 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.nepalprojekt.R
 
-@Preview
+//@Preview
 @Composable
-fun ThirdRecipeChild () {
+fun ThirdRecipeChild (
+    navController: NavController,
+    //painter: Painter,
+    modifier: Modifier = Modifier
+) {
     Card(
         backgroundColor = MaterialTheme.colors.primary,
         modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)

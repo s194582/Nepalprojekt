@@ -28,5 +28,21 @@ fun Navigation() {
         ) {
             RecipeListChildren(navController = navController)
         }
+        composable( route = Screen.FirstRecipeChild.route
+        ) {
+          ZeroSix(navController = navController)
+        }
+        composable( route = Screen.SecondRecipeChild.route
+        ) {
+            SecondRecipeChild(navController = navController)
+        }
+        composable( route = Screen.ThirdRecipeChild.route
+        ) {
+            ThirdRecipeChild(navController = navController)
+        }
+        composable( route = Screen.FourthRecipeChild.route
+        ) {
+            FourthRecipeChild(navController = navController)
+        }
     }
 }
