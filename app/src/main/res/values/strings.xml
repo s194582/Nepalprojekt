@@ -3,6 +3,13 @@
     <string name="show_less">Show less</string>
     <string name="show_more">Show more</string>
 
+    <string name="health_information">स्वास्थ जानकारी</string>
+    <string name="recipes">व्यञ्जनहरु</string>
+    <string name="general_information">सामान्य जानकारी</string>
+    <string name="mothers">आमाहरू</string>
+    <string name="pregnant_woman">गर्भवती महिला</string>
+    <string name="children">बच्चाहरु</string>
+
     <string name="zero_six_the_child_should_be_examined">बच्चा जन्मेको २४ घण्टा मा तेस्रो दिनमा र ४ महिनामा स्वास्थ संस्था मा गई जाँच गराउनु पर्छ।</string>"
     <string name="zero_six_from_birth_to_6_months"> जन्मिए देखि ६ महिना सम्म शिशु लाई आमाको दुध मात्र हुने हुँदा पानी पनि खुवाउनु पर्दैन।</string>"
     <string name="zero_six_starting_breastfeeding_as_soon">जन्मने बित्तिकै स्तनपान सुरु गराउने ले दूध लगातार आइरहन मद्दत गर्दछ। </string>"

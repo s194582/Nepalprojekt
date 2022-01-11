@@ -5,6 +5,7 @@ sealed class Screen(val route:String) {
     object MainMenu : Screen("main_menu")
     object RecipeAdultScreen : Screen("recipe_adult_screen")
 
+    object HealthInfoGeneral : Screen("health_general")
     object HealthInfoChild : Screen("health_child")
     object ZeroSix : Screen("zero_six")
     object SixNine : Screen("six_nine")
