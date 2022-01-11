@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Nepalprojekt</string>
     <string name="herGårDetGodt">Test Tekst til HerGårDetGodt billedet</string>"
+    <string name="TestTekst2">Test tekst 2</string>"
+    <string name="TestTekst3">Test tekst 3</string>"
+    <string name="TestTekst4">Test tekst 4</string>"
 </resources>
