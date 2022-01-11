@@ -193,7 +193,7 @@ fun RecipeRow( // Box containing two buttons for recipes
                     ) { navController.navigate(Screen.RecipeAdultScreen.route) }
                     ButtonElement(
                         subject = subject2
-                    ) { navController.navigate(Screen.RecipeAdultScreen.route) }
+                    ) { navController.navigate(Screen.RecipesChildScreen.route) }
                 }
             }
         }

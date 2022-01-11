@@ -18,6 +18,7 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -27,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.nepalprojekt.R
+import com.example.nepalprojekt.ui.theme.InfoBoxesExpandable
 import com.example.nepalprojekt.ui.theme.health.SixNine
 import com.example.nepalprojekt.ui.theme.health.ZeroSix
 import org.w3c.dom.Text
@@ -42,12 +44,37 @@ fun RecipesChild (
 ) {
     LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
         items(items = titles) { title ->
-            InfoBoxesExpandable(title = stringResource(id = R.string.pregnant_woman), description = "Pregnant")
-            InfoBoxesExpandable(title = stringResource(id = R.string.general_information), description = "General")
+            InfoBoxesExpandable(title = stringResource(id = R.string.nutritious_flour),
+                null,
+                stringResource(id = R.string.how_to_make_nutritious_flour),
+                painterResource(id = R.drawable.nf_3_grainsfornutritiousflour),
+                stringResource(id = R.string.nutritious_flour_recipe_first_four_paragraphs),
+                painterResource(id = R.drawable.nf1_sortoutthegrains),
+                stringResource(id = R.string.nutritious_flour_recipe_last_paragraph),
+                painterResource(id = R.drawable.nf2_roastthegrains),
+                null,
+                painterResource(id = R.drawable.nf3_grindthegrains),
+                null,
+                painterResource(id = R.drawable.nf4_putflourincontainer),
+                null)
+
+            InfoBoxesExpandable(title = stringResource(id = R.string.jaulo),
+                null,
+                stringResource(id = R.string.jaulo_ingredients),
+                painterResource(id = R.drawable.jaulo_rice),
+                null,
+                painterResource(id = R.drawable.jaulo_lentil),
+                stringResource(id = R.string.jaulo_directions),
+                painterResource(id = R.drawable.jaulo_spinach_saag),
+                stringResource(id = R.string.jaulo_directions2),
+                painterResource(id = R.drawable.jaulo),
+                null,
+                null,
+                null)
         }
     }
 }
-
+/*
 /**
  * Each box containing recipe information
  * In a Card shape, making rounded edges possible
@@ -111,3 +138,5 @@ fun InfoElementExpandable(
         }
     }
 }
+
+ */

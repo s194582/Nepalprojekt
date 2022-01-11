@@ -49,9 +49,9 @@ fun HealthGeneral (
 
             InfoBoxesExpandable(title = stringResource(id = R.string.general_information),
                 null,
-                description = "General",
+                description = "General information",
                 null,
-                stringResource(id = R.string.test),
+                null,
                 null,
                 null,
                 null,
