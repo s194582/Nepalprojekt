@@ -6,6 +6,7 @@ import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyItemScope
@@ -18,6 +19,7 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -40,16 +42,16 @@ fun HealthChild (
     //titles: List<String> = List(1) {"$it"} //listOf("0-6", "6-9", "9-12")
 ) {
     Column(modifier = Modifier.padding(vertical = 4.dp)) {
-        InfoBoxes(title = "० - ६ महिना", description = "description1") {
+        InfoBoxes(title = "० - ६ महिना", description = "description1", image = null) {
             navController.navigate(Screen.ZeroSix.route)
         } // 0-6 months
-        InfoBoxes(title = "६ - ९ महिना", description = "description2") {
+        InfoBoxes(title = "६ - ९ महिना", description = "description2", image = null) {
             navController.navigate(Screen.SixNine.route)
         } // 6-9 months
-        InfoBoxes(title = "९ - १२ महिना", description = "description3") {
+        InfoBoxes(title = "९ - १२ महिना", description = "description3", image = null) {
             navController.navigate(Screen.NineTwelve.route)
         } // 9-12 months
-        InfoBoxes(title = "१२ - २४ महिना", description = "description4") {
+        InfoBoxes(title = "१२ - २४ महिना", description = "description4", image = null) {
             navController.navigate(Screen.TwelveTwentyFour.route)
         } // 12-24 months
     }
@@ -78,13 +80,14 @@ fun HealthChild (
 fun InfoBoxes (
     title: String,
     description: String,
+    image: Painter?, // Possibility of an image
     onClick: () -> Unit
 ) {
     Card(
         backgroundColor = MaterialTheme.colors.primary,
         modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
     ) {
-        InfoElement(title, description, onClick)
+        InfoElement(title, description, image, onClick)
     }
 }
 
@@ -95,6 +98,7 @@ fun InfoBoxes (
 fun InfoElement(
     title: String,
     description: String,
+    image: Painter?,
     onClick: () -> Unit
 ) {
     var expanded by remember { mutableStateOf(false) } //rememberSaveable keeps expanded elements expanded
@@ -116,22 +120,16 @@ fun InfoElement(
 
             if (expanded) {
                 Text(description) //Place of description of each element
+                if (image != null) {
+                    Image(painter = image, contentDescription = null)
+                }
             }
 
             IconButton(onClick = onClick) {
                 Icon(
                     imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
 
-                    /*contentDescription = if (expanded) {
-                        Text(description) //Place of description of each element
-                    }
-                     */
-
-                    contentDescription = (if (expanded) { //String resources needed to make Icon work. Isn't shown in app.
-                        stringResource(R.string.show_less)
-                    } else {
-                        stringResource(R.string.show_more)
-                    })
+                    contentDescription = null
                 )
             }
 
