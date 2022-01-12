@@ -9,6 +9,7 @@ import com.example.nepalprojekt.ui.theme.health.NineTwelve
 import com.example.nepalprojekt.ui.theme.health.SixNine
 import com.example.nepalprojekt.ui.theme.health.TwelveTwentyfour
 import com.example.nepalprojekt.ui.theme.health.ZeroSix
+import com.example.nepalprojekt.ui.theme.recipes.RecipesAdult
 import com.example.nepalprojekt.ui.theme.recipes.RecipesChild
 
 /**
@@ -24,9 +25,9 @@ fun Navigation() {
         }
 
         /** Recipes */
-        composable(route = Screen.RecipeAdultScreen.route //+ "?name={name}",
-            ) { //entry ->
-            Recipes(navController = navController)//name = entry.arguments?.getString("name"))
+        composable(route = Screen.RecipeAdultScreen.route
+            ) {
+            RecipesAdult(navController = navController)
         }
         composable(route = Screen.RecipesChildScreen.route
         ) {

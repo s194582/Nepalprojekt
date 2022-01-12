@@ -173,8 +173,6 @@ fun InfoElementExpandable(
                     Text(desc5)
                 }
             }
-
-            //description = if (expanded) {function} else {}
         }
 
 /*OutlinedButton(
@@ -193,14 +191,8 @@ fun InfoElementExpandable(
                 }
                  */
 
-                contentDescription = (if (expanded) { //String resources needed to make Icon work. Isn't shown in app.
-                    stringResource(R.string.show_less)
-                } else {
-                    stringResource(R.string.show_more)
-                })
+                contentDescription = null
             )
-
-
         }
     }
 }
