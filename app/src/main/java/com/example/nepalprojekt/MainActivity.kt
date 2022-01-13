@@ -84,7 +84,7 @@ fun MainMenu(
             subject2 = stringResource(id = R.string.children),
             navController = navController)
         RecipeRow(title = stringResource(id = R.string.recipes),
-            subject1 = "Parent", // Waiting for translation
+            subject1 = stringResource(id = R.string.parents),
             subject2 = stringResource(id = R.string.children),
             navController = navController)
 

@@ -4,6 +4,7 @@ import android.graphics.Paint
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -29,20 +30,21 @@ fun RecipesAdult (
 ) {
     LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
         items(items = titles) { title ->
+            Box() {Image(painterResource(id = R.drawable.hp4_balanceddiet_withmeat), contentDescription = null)}
             ResAdultIntro() // Intro
             InfoBoxesExpandable( // Strengthening food
                 title = stringResource(id = R.string.strengthening_food), null,
-                description = "",
-                image2 = painterResource(id = R.drawable.ra3_food_group_2_energy), null, null, null, null,null, null,null, null,null
-            )// TODO: need pictures for strengthening and protective foods
+                description = null,
+                image2 = painterResource(id = R.drawable.ra1_strength_food), null, null, null, null,null, null,null, null,null
+            )
             InfoBoxesExpandable( // Protective food
                 title = stringResource(id = R.string.protective_food), null,
-                description = "",
-                image2 = painterResource(id = R.drawable.ra3_food_group_2_energy), null, null, null, null,null, null,null, null,null
+                description = null,
+                image2 = painterResource(id = R.drawable.ra2_protective_food), null, null, null, null,null, null,null, null,null
             )
             InfoBoxesExpandable( // Energy food
                 title = stringResource(id = R.string.energy_food), null,
-                description = "",
+                description = null,
                 image2 = painterResource(id = R.drawable.ra3_food_group_2_energy), null, null, null, null,null, null,null, null,null
             )
             RecipeSuggestionsIntro() //Overskrift til opskrifter
