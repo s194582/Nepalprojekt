@@ -1,11 +1,14 @@
 package com.example.nepalprojekt.ui.theme
 
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.MaterialTheme
+import android.inputmethodservice.Keyboard
+import androidx.compose.foundation.layout.Row
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -34,6 +37,29 @@ fun BackButton (
 
 /** Composition inspired by https://www.jetpackcompose.net/scaffold topAppBar */
 @Composable
-fun TopBar () {
+fun TopBar (
+    topBarTitle: String,
+    onClick: () -> Unit
+) {
+    Row() {
+        IconButton(onClick = onClick) {
+            Icon(Icons.Filled.ArrowBack, "backIcon")
+        }
+        Text(text = topBarTitle,
+            fontSize = 30.sp,
+            color = Color.White)
+    }
 
 }
+/*val scaffoldState = rememberScaffoldState(rememberDrawerState(DrawerValue.Closed))
+    Scaffold (
+        topBar = { TopAppBar(
+            title = {  },
+            backgroundColor = MaterialTheme.colors.primary) },
+        floatingActionButtonPosition = FabPosition.End,
+        floatingActionButton = { FloatingActionButton(onClick = {}) {
+            Icon(imageVector = Icons.Default.Add, contentDescription = "returnIcon")
+        } }
+    )
+
+     */
