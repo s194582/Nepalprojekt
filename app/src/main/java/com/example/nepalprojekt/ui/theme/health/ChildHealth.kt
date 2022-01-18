@@ -188,7 +188,6 @@ fun NineTwelve (
     }
 }
 
-/* TODO: Revisit for changes in translations */
 @Composable
 fun TwelveTwentyfour (
     navController: NavController
@@ -205,13 +204,16 @@ fun TwelveTwentyfour (
                 .padding(12.dp)
                 .verticalScroll(rememberScrollState())
         ) {
-            /* Picture of
-            Image(painter = painterResource(id = R.drawable.),
-                contentDescription = ""
-            )
-            Text(stringResource(id = R.string.))
-
-             */
+            // In addition to breastfeeding, 3 times a day (3 meals only), two teaspoons of glass (250 ml) of supplementary food and 2 meals should be fed.
+            Text(stringResource(id = R.string.twelve_twentyfour_in_addition))
+            Image(painter = painterResource(id = R.drawable.hc51_12_24months_withvegetables),
+                contentDescription = "three meal a day with vegetables")
+            // Each meal should include the three food groups.
+            Text(stringResource(id = R.string.twelve_twentyfour_each_meal))
+            // Snacks should include seasonal fruits and eggs if possible.
+            Text(stringResource(id = R.string.twelve_twentyfour_snacks_should))
+            // Eating fresh home-cooked food (meat, eggs and fish) should be encouraged.
+            Text(stringResource(id = R.string.twelve_twentyfour_eating_fresh))
 
             BackButton() {
                 navController.navigate(Screen.HealthInfoChild.route)

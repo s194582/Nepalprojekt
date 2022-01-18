@@ -28,13 +28,15 @@
     <string name="six_nine_only_salt">खाना तयार गर्दा दुई बालबालिकाको चिन्न भएको नुनको मात्र प्रयोग गर्नु पर्छ।</string>
 
     <string name="nine_twelve_in_addition_to">बालबालिकालाई स्तनपान को साथ साथै दिनमा ३ पटक ( २ पटक खाना र एक पटक जाउलो ) एक चिया गलास् (१२५ एम एल ) फरक खाना र १ पटक खाजा खुवाउने ।
-    \nखाजा मा फलफुल समावेश गर्न सकिन्छ।
-</string>
+    \nखाजा मा फलफुल समावेश गर्न सकिन्छ।</string>
     <string name="nine_twelve_clean_and_safe">सफा र सुरक्षित पानीको प्रयोग गर्नु पर्छ।</string>
     <string name="nine_twelve_special_attention">सरसफाइमा ( काम गर्ने वरिपरि भुइँहरु , भाँडाकुँडा हरु , हातहरू ) विशेष ध्यान दिनु पर्छ।</string>
     <string name="nine_twelve_discourage_eating">बजारमा पाइने कम पोषिला खानेकुरा खान निरुत्साहित गर्ने।</string>
 
-    <string name="twelve_twentyfour"></string>
+    <string name="twelve_twentyfour_in_addition">स्तनपानको साथ साथै दिनमा ३ पटक ( ३ पटक नै खाना) दुई चम्चा गलास ( २५० एम एल ) बराबरको पुरक खाना र २ पटक खाजा खुवाउनु पर्छ।</string>
+    <string name="twelve_twentyfour_each_meal">हरेक बार खाना चार समावेश गर्नु पर्दछ।</string>
+    <string name="twelve_twentyfour_snacks_should">खाजा मा फलफूल , अण्डा समावेश गर्ने ।</string>
+    <string name="twelve_twentyfour_eating_fresh">घरमै पाकेको ताजा राम्रो सँग पकाएको खाना ( विशेष गरी मासु , अण्डा र माछा ) खुवाउन प्रोत्साहन गर्नु पर्दछ।</string>
 
     <string name="pregnancy">गर्भावस्था</string>
     <string name="pregnancy_regular_health_check_ups">कम्तीमा ४ पटक ( ४,६,८,९ महिना ) स्वास्थ संस्थामा गएर नियमित स्वास्थ जाँच गराउनुपर्दछ र टी टी खोप लगाउनुपर्दछ। </string>
