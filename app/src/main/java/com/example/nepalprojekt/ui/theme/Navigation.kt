@@ -1,10 +1,13 @@
 package com.example.nepalprojekt.ui.theme
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.res.painterResource
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.nepalprojekt.MainMenu
+import com.example.nepalprojekt.R
 import com.example.nepalprojekt.ui.theme.health.NineTwelve
 import com.example.nepalprojekt.ui.theme.health.SixNine
 import com.example.nepalprojekt.ui.theme.health.TwelveTwentyfour
@@ -21,7 +24,7 @@ fun Navigation() {
     NavHost(navController = navController, startDestination = Screen.MainMenu.route) {
         composable(route = Screen.MainMenu.route
         ) {
-            MainMenu(navController = navController)
+            MainMenu(navController = navController, painter = painterResource(id = R.drawable.background1))
         }
 
         /** Recipes */

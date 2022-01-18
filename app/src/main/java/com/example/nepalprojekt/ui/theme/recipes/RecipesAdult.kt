@@ -1,13 +1,14 @@
 package com.example.nepalprojekt.ui.theme.recipes
 
-import android.graphics.Paint
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ExpandLess
@@ -15,6 +16,7 @@ import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -30,6 +32,8 @@ fun RecipesAdult (
 ) {
     LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
         items(items = titles) { title ->
+            TopBar(topBarTitle = "Recipes") { navController.navigate(Screen.MainMenu.route) }
+
             Box() {Image(painterResource(id = R.drawable.hp4_balanceddiet_withmeat), contentDescription = null)}
             ResAdultIntro() // Intro
             InfoBoxesExpandable( // Strengthening food
@@ -84,7 +88,9 @@ fun WaterCressCurry () {
     var expanded by remember { mutableStateOf(false) }
 
     Card(
-        backgroundColor = MaterialTheme.colors.primary,
+        backgroundColor = Color.White,
+        border = BorderStroke(width = 4.dp, color = MaterialTheme.colors.primary),
+        shape = RoundedCornerShape(8.dp),
         modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
     ) {
         Box(
@@ -156,7 +162,6 @@ fun WaterCressCurry () {
                         )
                     }
                 }
-
             }
             IconButton(onClick = { expanded = !expanded }) {
                 Icon(
@@ -165,6 +170,5 @@ fun WaterCressCurry () {
                 )
             }
         }
-
     }
 }

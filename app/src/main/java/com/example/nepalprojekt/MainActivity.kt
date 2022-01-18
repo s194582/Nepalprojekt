@@ -3,15 +3,21 @@ package com.example.nepalprojekt
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
+import androidx.compose.material.MaterialTheme.colors
+import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
@@ -21,20 +27,32 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.nepalprojekt.ui.theme.Navigation
+import com.example.nepalprojekt.ui.theme.NepalprojektTheme
 import com.example.nepalprojekt.ui.theme.Screen
+
+val Violet = Color(0xFFe1bee7)
+val seafoam = Color(0xffe0f2f1)
+val purple = Color(0xff6633FF)
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            /*NepalprojektTheme {
+            NepalprojektTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting(name = "Android")
+                Surface(color = seafoam, //color = MaterialTheme.colors.background
+                        modifier = Modifier.fillMaxSize(1f)
+                ) {
+
+                    Navigation()
 
                 }
+            }
+            /*MaterialTheme (colors = if (DarkTheme) DarkColors else LightColors) {
+
             }*/
-            Navigation()
+
+
 
             val painter = painterResource(id = R.drawable.background1) // For designed background
 
@@ -55,24 +73,21 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MainMenu(
     navController: NavController,
-    //painter: Painter,
+    painter: Painter,
     modifier: Modifier = Modifier
 ) {
-    /*var text by remember {
-        mutableStateOf("")
-    }
-    TextField(value = text, onValueChange = {text = it})
-    Button(onClick = { navController.navigate(Screen.RecipeAdultScreen.route) }) {
-        Text(text = "Test going to RecipeScreen")
-    }*/
-    Box(
+
+
+    /*Box(
         modifier = Modifier.fillMaxSize()
-    ){
-        /*Image(
-            painter = painter,
-            contentDescription = "backgroundPhoto",
-            contentScale = ContentScale.FillBounds
-        )*/ }
+    ){Image(
+        painter = painter,
+        contentDescription = "backgroundPhoto",
+        contentScale = ContentScale.FillBounds
+    )
+         }
+
+     */
     Column (modifier = Modifier
         .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,

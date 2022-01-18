@@ -3,10 +3,12 @@ package com.example.nepalprojekt.ui.theme
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ExpandLess
@@ -14,6 +16,7 @@ import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -85,7 +88,9 @@ fun InfoBoxesExpandable (
     desc6: String?
 ) {
     Card(
-        backgroundColor = MaterialTheme.colors.primary,
+        backgroundColor = Color.White,
+        border = BorderStroke(width = 4.dp, color = MaterialTheme.colors.primary),
+        shape = RoundedCornerShape(8.dp),
         modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
     ) {
         InfoElementExpandable(title, image, description, image2, desc2, image3, desc3, image4, desc4, image5, desc5, image6, desc6)
@@ -113,15 +118,6 @@ fun InfoElementExpandable(
     desc6: String?
 ) {
     var expanded by remember { mutableStateOf(false) } //rememberSaveable keeps expanded elements expanded
-
-/*val extraPadding by animateDpAsState( //animates extraPadding, also animateDpAsState is interuptible
-    if (expanded.value) 48.dp else 0.dp,
-    animationSpec = spring(
-        dampingRatio = Spring.DampingRatioMediumBouncy,
-        stiffness = Spring.StiffnessLow
-    )
-)*/
-
 
     Row (modifier = Modifier
         .padding(12.dp)
@@ -185,11 +181,6 @@ fun InfoElementExpandable(
         IconButton(onClick = { expanded = !expanded }) {
             Icon(
                 imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
-
-                /*contentDescription = if (expanded) {
-                    Text(description) //Place of description of each element
-                }
-                 */
 
                 contentDescription = null
             )

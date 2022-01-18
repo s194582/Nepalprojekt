@@ -8,7 +8,10 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -43,10 +46,10 @@ fun TopBar (
 ) {
     Row() {
         IconButton(onClick = onClick) {
-            Icon(Icons.Filled.ArrowBack, "backIcon")
+            Icon(Icons.Filled.ArrowBack, "backIcon", tint = Color.White)
         }
         Text(text = topBarTitle,
-            fontSize = 30.sp,
+            fontSize = 28.sp,
             color = Color.White)
     }
 
