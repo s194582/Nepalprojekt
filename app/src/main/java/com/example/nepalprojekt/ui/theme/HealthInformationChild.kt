@@ -45,6 +45,8 @@ fun HealthChild (
     //titles: List<String> = List(1) {"$it"} //listOf("0-6", "6-9", "9-12")
 ) {
     Column(modifier = Modifier.padding(vertical = 4.dp)) {
+        TopBar(topBarTitle = stringResource(id = R.string.health_information)) { navController.navigate(Screen.MainMenu.route) }
+
         InfoBoxes(title = "० - ६ महिना", description = "description1", image = null) {
             navController.navigate(Screen.ZeroSix.route)
         } // 0-6 months
@@ -58,22 +60,7 @@ fun HealthChild (
             navController.navigate(Screen.TwelveTwentyFour.route)
         } // 12-24 months
     }
-
-    /*LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
-        items(items = titles) { title ->
-            InfoBoxes(title = "० - ६ महिना", description = "description")
-            //(stringResource(id = R.string.zero_six_the_child_should_be_examined))
-                //, function = ZeroSix()) //0-6 months
-            //InfoBoxes(title = "०- ९ महिना", description = "SixNine()", function = SixNine()) // 6-9 months
-
-            //InfoBoxes(title = "९ - १२ महिना", description = "description3", function = ZeroSix()) // 9-12 months
-
-        }
-    }
-
-     */
 }
-
 
 /**
  * Each box containing health information

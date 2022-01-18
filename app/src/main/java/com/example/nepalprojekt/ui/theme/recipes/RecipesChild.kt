@@ -11,6 +11,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.nepalprojekt.R
 import com.example.nepalprojekt.ui.theme.InfoBoxesExpandable
+import com.example.nepalprojekt.ui.theme.Screen
+import com.example.nepalprojekt.ui.theme.TopBar
 
 /**
  * Inspiration for expanding info boxes from
@@ -23,6 +25,9 @@ fun RecipesChild (
 ) {
     LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
         items(items = titles) { title ->
+            TopBar(topBarTitle = stringResource(id = R.string.recipes_for_children)) { navController.navigate(
+                Screen.MainMenu.route) }
+
             InfoBoxesExpandable(title = stringResource(id = R.string.nutritious_flour),
                 null,
                 stringResource(id = R.string.how_to_make_nutritious_flour),

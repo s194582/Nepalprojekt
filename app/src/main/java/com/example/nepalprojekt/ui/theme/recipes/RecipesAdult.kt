@@ -32,7 +32,7 @@ fun RecipesAdult (
 ) {
     LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
         items(items = titles) { title ->
-            TopBar(topBarTitle = "Recipes") { navController.navigate(Screen.MainMenu.route) }
+            TopBar(topBarTitle = stringResource(id = R.string.recipes)) { navController.navigate(Screen.MainMenu.route) }
 
             Box() {Image(painterResource(id = R.drawable.hp4_balanceddiet_withmeat), contentDescription = null)}
             ResAdultIntro() // Intro

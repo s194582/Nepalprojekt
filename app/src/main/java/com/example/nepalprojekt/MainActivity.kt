@@ -77,17 +77,6 @@ fun MainMenu(
     modifier: Modifier = Modifier
 ) {
 
-
-    /*Box(
-        modifier = Modifier.fillMaxSize()
-    ){Image(
-        painter = painter,
-        contentDescription = "backgroundPhoto",
-        contentScale = ContentScale.FillBounds
-    )
-         }
-
-     */
     Column (modifier = Modifier
         .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,

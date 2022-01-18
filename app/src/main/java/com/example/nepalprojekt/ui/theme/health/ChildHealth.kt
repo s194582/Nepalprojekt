@@ -142,7 +142,6 @@ fun SixNine (
     }
 }
 
-/* TODO: Revisit for changes in translations */
 @Composable
 fun NineTwelve (
     navController: NavController
@@ -159,13 +158,28 @@ fun NineTwelve (
                 .padding(12.dp)
                 .verticalScroll(rememberScrollState())
         ) {
-            /* Picture of
-            Image(painter = painterResource(id = R.drawable.),
-                contentDescription = ""
-            )
-            Text(stringResource(id = R.string.))
-
-             */
+            // Picture of three meals a day
+            Image(painter = painterResource(id = R.drawable.hc41_9_12months_withfoods),
+                contentDescription = "three meals a day")
+            //In addition to breastfeeding, feed the baby 3 times a day (2 meals and 1 oatmeal), one glass of tea (125 ml) different food and 1 meal.
+            //Fruits can be included in the lunch.
+            Text(stringResource(id = R.string.nine_twelve_in_addition_to))
+            // Picture of clean water
+            Image(painter = painterResource(id = R.drawable.hc42_clean_water_big),
+                contentDescription = "clean water")
+            //Clean and safe water should be used.
+            Text(stringResource(id = R.string.nine_twelve_clean_and_safe))
+            // Picture of handwashing
+            Image(painter = painterResource(id = R.drawable.hc241_handwashing),
+                contentDescription = "hand washing")
+            //Special attention should be paid to hygiene (floors, utensils, hands around work).
+            Text(stringResource(id = R.string.nine_twelve_special_attention))
+            // Picture of junk with a cross over
+            Image(painter = painterResource(id = R.drawable.hc44_no_snacks_poster_2a),
+                contentDescription = "NO snacks poster")
+            //Discourage eating less nutritious food available in the market.
+            //It will make your child less healthy.
+            Text(stringResource(id = R.string.nine_twelve_discourage_eating))
 
             BackButton() {
                 navController.navigate(Screen.HealthInfoChild.route)

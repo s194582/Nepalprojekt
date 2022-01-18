@@ -35,6 +35,7 @@ fun HealthGeneral (
 ) {
     LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
         items(items = titles) { title ->
+            TopBar(topBarTitle = stringResource(id = R.string.health_information)) { navController.navigate(Screen.MainMenu.route) }
 
             InfoBoxesExpandable(title = stringResource(id = R.string.pregnancy), // Pregnancy
                 painterResource(id = R.drawable.hp1_gravid_lyttermave),

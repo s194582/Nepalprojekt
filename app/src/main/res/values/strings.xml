@@ -5,6 +5,7 @@
 
     <string name="health_information">स्वास्थ जानकारी</string>
     <string name="recipes">व्यञ्जनहरु</string>
+    <string name="recipes_for_children">बच्चाहरु को लागि व्यञ्जनहरु</string>
     <string name="general_information">सामान्य जानकारी</string>
     <string name="mothers">आमाहरू</string>
     <string name="pregnant_woman">गर्भवती महिला</string>
@@ -26,7 +27,12 @@
     <string name="six_nine_wash_hands_thoroughly">खाना बनाउनु अघि र खुवाउनु पछि राम्रो सँग साबुन पानीले हात धुने।</string>
     <string name="six_nine_only_salt">खाना तयार गर्दा दुई बालबालिकाको चिन्न भएको नुनको मात्र प्रयोग गर्नु पर्छ।</string>
 
-    <string name="nine_twelve_"></string>
+    <string name="nine_twelve_in_addition_to">बालबालिकालाई स्तनपान को साथ साथै दिनमा ३ पटक ( २ पटक खाना र एक पटक जाउलो ) एक चिया गलास् (१२५ एम एल ) फरक खाना र १ पटक खाजा खुवाउने ।
+    \nखाजा मा फलफुल समावेश गर्न सकिन्छ।
+</string>
+    <string name="nine_twelve_clean_and_safe">सफा र सुरक्षित पानीको प्रयोग गर्नु पर्छ।</string>
+    <string name="nine_twelve_special_attention">सरसफाइमा ( काम गर्ने वरिपरि भुइँहरु , भाँडाकुँडा हरु , हातहरू ) विशेष ध्यान दिनु पर्छ।</string>
+    <string name="nine_twelve_discourage_eating">बजारमा पाइने कम पोषिला खानेकुरा खान निरुत्साहित गर्ने।</string>
 
     <string name="twelve_twentyfour"></string>
 
