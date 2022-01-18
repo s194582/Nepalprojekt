@@ -117,8 +117,6 @@ fun SixNine (
                 contentDescription = "jaulo and litto")
             // Different foods should be prepared daily by mixing at least 4 groups of food (grains, nuts, animal foods, fruits and vegetables).
             Text(stringResource(id = R.string.six_nine_different_foods_should))
-            /*TODO
-            *  Consider adding link to recipes*/
 
             Image(painter = painterResource(id = R.drawable.hc24_boiled_water),
                 contentDescription = "boiling water")
@@ -130,7 +128,7 @@ fun SixNine (
             // Wash hands thoroughly with soap and water before cooking and after feeding.
             Text(stringResource(id = R.string.six_nine_wash_hands_thoroughly))
 
-            Image(painter = painterResource(id = R.drawable.hc25_two_children_logo_salt),
+            Image(painter = painterResource(id = R.drawable.hc25_two_children_salt),
                 contentDescription = "salt logo")
             // Only salt with two children logo should be used when preparing food.
             Text(stringResource(id = R.string.six_nine_only_salt))

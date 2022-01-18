@@ -55,6 +55,20 @@ fun RecipesChild (
                 null,
                 null,
                 null)
+
+            InfoBoxesExpandable(title = stringResource(id = R.string.the_best_flour_litto),
+                painterResource(id = R.drawable.litto),
+                stringResource(id = R.string.litto_ingredients),
+                painterResource(id = R.drawable.litto_kopi_af_sarbottam_pitho_nutritiousflower),
+                null,
+                null,
+                stringResource(id = R.string.litto_directions),
+                painterResource(id = R.drawable.litto_ghee_oil),
+                stringResource(id = R.string.litto_note),
+                null,
+                null,
+                null,
+                null)
         }
     }
 }

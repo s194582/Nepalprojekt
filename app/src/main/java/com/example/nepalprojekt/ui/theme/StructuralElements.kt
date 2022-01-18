@@ -46,11 +46,11 @@ fun TopBar (
 ) {
     Row() {
         IconButton(onClick = onClick) {
-            Icon(Icons.Filled.ArrowBack, "backIcon", tint = Color.White)
+            Icon(Icons.Filled.ArrowBack, "backIcon", tint = MaterialTheme.colors.primary)
         }
         Text(text = topBarTitle,
             fontSize = 28.sp,
-            color = Color.White)
+            color = MaterialTheme.colors.primary)
     }
 
 }
