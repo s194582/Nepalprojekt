@@ -169,6 +169,12 @@ fun InfoElementExpandable(
                 if (desc5 != null) {
                     Text(desc5)
                 }
+                if (image6 != null) {
+                    Image(painter = image6, contentDescription = null)
+                }
+                if (desc6 != null) {
+                    Text(desc6)
+                }
             }
         }
 

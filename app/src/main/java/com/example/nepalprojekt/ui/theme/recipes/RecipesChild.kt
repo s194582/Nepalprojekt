@@ -28,9 +28,10 @@ fun RecipesChild (
             TopBar(topBarTitle = stringResource(id = R.string.recipes_for_children)) { navController.navigate(
                 Screen.MainMenu.route) }
 
-            InfoBoxesExpandable(title = stringResource(id = R.string.nutritious_flour),
+            // Sarbottam Pitho recipe
+            InfoBoxesExpandable(title = stringResource(id = R.string.sarbottam_pitho),
                 null,
-                stringResource(id = R.string.how_to_make_nutritious_flour),
+                stringResource(id = R.string.how_to_prepare_sarbottam_pitho),
                 painterResource(id = R.drawable.nf_3_grainsfornutritiousflour),
                 stringResource(id = R.string.nutritious_flour_recipe_first_four_paragraphs),
                 painterResource(id = R.drawable.nf1_sortoutthegrains),
@@ -42,6 +43,7 @@ fun RecipesChild (
                 painterResource(id = R.drawable.nf4_putflourincontainer),
                 null)
 
+            // Jaulo recipe
             InfoBoxesExpandable(title = stringResource(id = R.string.jaulo),
                 null,
                 stringResource(id = R.string.jaulo_ingredients),
@@ -52,23 +54,31 @@ fun RecipesChild (
                 painterResource(id = R.drawable.jaulo_spinach_saag),
                 stringResource(id = R.string.jaulo_directions2),
                 painterResource(id = R.drawable.jaulo),
-                null,
-                null,
-                null)
+                null,null,null)
 
+            // Litto recipe
             InfoBoxesExpandable(title = stringResource(id = R.string.the_best_flour_litto),
                 painterResource(id = R.drawable.litto),
                 stringResource(id = R.string.litto_ingredients),
                 painterResource(id = R.drawable.litto_kopi_af_sarbottam_pitho_nutritiousflower),
-                null,
-                null,
+                null,null,
                 stringResource(id = R.string.litto_directions),
                 painterResource(id = R.drawable.litto_ghee_oil),
                 stringResource(id = R.string.litto_note),
+                null,null,null,null)
+
+            // Pumpkin pudding recipe
+            InfoBoxesExpandable(title = stringResource(id = R.string.pumpkin_pudding),
                 null,
-                null,
-                null,
-                null)
+                stringResource(id = R.string.how_to_make_pumpkin_pudding),
+                painterResource(id = R.drawable.pumpkin_pictures_of_ingredients),
+                stringResource(id = R.string.materials_required),null,
+                stringResource(id = R.string.pumpkin_pudding_ingredients),
+                painterResource(id = R.drawable.pumpkin_overview_of_quantity_of_ingredients),
+                stringResource(id = R.string.how_to_make),null,
+                stringResource(id = R.string.pumpkin_pudding_directions),
+                painterResource(id = R.drawable.pumpkin_readyinbowl),
+                stringResource(id = R.string.pumpkin_pudding_note))
         }
     }
 }

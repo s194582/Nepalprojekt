@@ -3,6 +3,7 @@ package com.example.nepalprojekt
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -16,6 +17,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -40,7 +42,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             NepalprojektTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(color = seafoam, //color = MaterialTheme.colors.background
+                Surface(color = Violet, //color = MaterialTheme.colors.background
                         modifier = Modifier.fillMaxSize(1f)
                 ) {
 
@@ -55,17 +57,7 @@ class MainActivity : ComponentActivity() {
 
 
             val painter = painterResource(id = R.drawable.background1) // For designed background
-
-            //MainMenu(painter = painter)
-
-            /*//val painter = painterResource(id = R.drawable.)
-            val description = ""
-            val title = ""
-            ImageCard(
-                //painter = painter,
-                contentDescription = description,
-                title = title
-            )*/
+            
         }
     }
 }
@@ -76,22 +68,33 @@ fun MainMenu(
     painter: Painter,
     modifier: Modifier = Modifier
 ) {
-
-    Column (modifier = Modifier
-        .fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.SpaceEvenly
+    Card (modifier = Modifier.fillMaxSize(),
+        shape = RectangleShape
     ) {
+        Image(painter = painterResource(id = R.drawable.logo_background), contentDescription = null,
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop)
+        Column(
+            modifier = Modifier
+                .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Bottom
+            ) {
 
-        HealthRow(title = stringResource(id = R.string.health_information),
-            subject1 = stringResource(id = R.string.general_information),
-            subject2 = stringResource(id = R.string.children),
-            navController = navController)
-        RecipeRow(title = stringResource(id = R.string.recipes),
-            subject1 = stringResource(id = R.string.parents),
-            subject2 = stringResource(id = R.string.children),
-            navController = navController)
-
+            HealthRow(
+                title = stringResource(id = R.string.health_information),
+                subject1 = stringResource(id = R.string.general_information),
+                subject2 = stringResource(id = R.string.children),
+                navController = navController
+            )
+            RecipeRow(
+                title = stringResource(id = R.string.recipes),
+                subject1 = stringResource(id = R.string.parents),
+                subject2 = stringResource(id = R.string.children),
+                navController = navController
+            )
+            Spacer(modifier = Modifier.padding(10.dp))
+        }
     }
 }
 
@@ -107,13 +110,14 @@ fun HealthRow( // Box containing two buttons for health info
 ) {
     Card( // for rounded shape
         shape = RoundedCornerShape(10.dp), //rounded corners of outer box
+        border = BorderStroke(width = 4.dp, color = colors.primary),
         modifier = Modifier
             .padding(10.dp), //around outer box
         elevation = 20.dp //still don't know what it does
     ) {
         Box (
             modifier = Modifier
-                .background(Color.Green)
+                .background(Color.LightGray)
                 .padding(10.dp) //between inner and outer box
         ){
             Column(
@@ -122,10 +126,10 @@ fun HealthRow( // Box containing two buttons for health info
                 Text(title,
                     style = TextStyle(
                         color = Color.Black,
-                        fontSize = 18.sp,
+                        fontSize = 20.sp,
                         textAlign = TextAlign.Center)//.offset(40.dp, 40.dp))
                 )
-                Spacer(modifier = Modifier.height(10.dp))
+                Spacer(modifier = Modifier.height(6.dp))
                 Row(
                     modifier = Modifier
                         .fillMaxWidth(),
@@ -156,13 +160,14 @@ fun RecipeRow( // Box containing two buttons for recipes
 ) {
     Card( // for rounded shape
         shape = RoundedCornerShape(10.dp), //rounded corners of outer box
+        border = BorderStroke(width = 4.dp, color = MaterialTheme.colors.primary),
         modifier = Modifier
             .padding(10.dp), //around outer box
         elevation = 20.dp //still don't know what it does
     ) {
         Box (
             modifier = Modifier
-                .background(Color.Green)
+                .background(Violet)
                 .padding(10.dp) //between inner and outer box
         ){
             Column(
@@ -171,10 +176,10 @@ fun RecipeRow( // Box containing two buttons for recipes
                 Text(title,
                     style = TextStyle(
                         color = Color.Black,
-                        fontSize = 18.sp,
+                        fontSize = 20.sp,
                         textAlign = TextAlign.Center)//.offset(40.dp, 40.dp))
                 )
-                Spacer(modifier = Modifier.height(10.dp))
+                Spacer(modifier = Modifier.height(6.dp))
                 Row(
                     modifier = Modifier
                         .fillMaxWidth(),
