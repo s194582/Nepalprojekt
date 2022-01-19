@@ -82,6 +82,7 @@ fun ResAdultIntro () {
         }
     }
 }
+
 /**
  It says: "It is important to eat a balanced diet.
 Eat items from each food group and put same quantity of each item on your plate.
