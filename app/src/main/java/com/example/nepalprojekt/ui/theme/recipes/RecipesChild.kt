@@ -67,7 +67,7 @@ fun RecipesChild (
                 stringResource(id = R.string.litto_note),
                 null,null,null,null)
 
-            // Pumpkin pudding recipe
+            // Pumpkin pudding recipe //TODO: check back for translation
             InfoBoxesExpandable(title = stringResource(id = R.string.pumpkin_pudding),
                 null,
                 stringResource(id = R.string.how_to_make_pumpkin_pudding),

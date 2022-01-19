@@ -1,5 +1,6 @@
 package com.example.nepalprojekt.ui.theme
 
+import android.graphics.Picture
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
@@ -37,6 +38,8 @@ fun HealthGeneral (
         items(items = titles) { title ->
             TopBar(topBarTitle = stringResource(id = R.string.health_information)) { navController.navigate(Screen.MainMenu.route) }
 
+            PictureBox(title = null, image = painterResource(id = R.drawable.whentowashhands), description = null)
+            // Pregnancy info box
             InfoBoxesExpandable(title = stringResource(id = R.string.pregnancy), // Pregnancy
                 painterResource(id = R.drawable.hp1_gravid_lyttermave),
                 null,
@@ -51,11 +54,12 @@ fun HealthGeneral (
                 null, // TODO: revisit to see if drawing has been made
                 stringResource(id = R.string.pregnancy_get_enough_rest))
 
+            // Generel information consists of vitamin informations atm.
             InfoBoxesExpandable(title = stringResource(id = R.string.general_information),
                 null,
-                description = "General information",
+                stringResource(id = R.string.vitamin_a_description),
                 null,
-                null,
+                stringResource(id = R.string.iron_element_description),
                 null,
                 null,
                 null,
@@ -64,6 +68,7 @@ fun HealthGeneral (
                 null,
                 null,
                 null)
+            PictureBox(title = null, image = painterResource(id = R.drawable.whentogotohospital), description = null)
         }
     }
 }
@@ -178,13 +183,6 @@ fun InfoElementExpandable(
             }
         }
 
-/*OutlinedButton(
-    onClick = { expanded.value = !expanded.value }
-) {
-    Text(if (expanded.value) "Show less" else "Show more")
-}*/
-
-// -----------IconButton, instead of OutlinedButton
         IconButton(onClick = { expanded = !expanded }) {
             Icon(
                 imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,

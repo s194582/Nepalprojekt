@@ -116,8 +116,7 @@ fun b (
                 contentDescription = "jaulo and litto")
             // Different foods should be prepared daily by mixing at least 4 groups of food (grains, nuts, animal foods, fruits and vegetables).
             Text(stringResource(id = R.string.six_nine_different_foods_should))
-            /*TODO
-            *  Consider adding link to recipes*/
+
 
             Image(painter = painterResource(id = R.drawable.hc24_boiled_water),
                 contentDescription = "boiling water")

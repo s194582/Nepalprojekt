@@ -33,6 +33,7 @@ import com.example.nepalprojekt.ui.theme.NepalprojektTheme
 import com.example.nepalprojekt.ui.theme.Screen
 
 val Violet = Color(0xFFe1bee7)
+val newViolet = Color(0xFFf4d4fa)
 val seafoam = Color(0xffe0f2f1)
 val purple = Color(0xff6633FF)
 
@@ -64,9 +65,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainMenu(
-    navController: NavController,
-    painter: Painter,
-    modifier: Modifier = Modifier
+    navController: NavController
 ) {
     Card (modifier = Modifier.fillMaxSize(),
         shape = RectangleShape
@@ -167,7 +166,7 @@ fun RecipeRow( // Box containing two buttons for recipes
     ) {
         Box (
             modifier = Modifier
-                .background(Violet)
+                .background(newViolet)
                 .padding(10.dp) //between inner and outer box
         ){
             Column(

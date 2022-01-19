@@ -24,7 +24,7 @@ fun Navigation() {
     NavHost(navController = navController, startDestination = Screen.MainMenu.route) {
         composable(route = Screen.MainMenu.route
         ) {
-            MainMenu(navController = navController, painter = painterResource(id = R.drawable.background1))
+            MainMenu(navController = navController)
         }
 
         /** Recipes */
