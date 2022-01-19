@@ -43,7 +43,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             NepalprojektTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(color = Violet, //color = MaterialTheme.colors.background
+                Surface(color = newViolet, //color = MaterialTheme.colors.background
                         modifier = Modifier.fillMaxSize(1f)
                 ) {
 
@@ -116,7 +116,7 @@ fun HealthRow( // Box containing two buttons for health info
     ) {
         Box (
             modifier = Modifier
-                .background(Color.LightGray)
+                .background(newViolet)
                 .padding(10.dp) //between inner and outer box
         ){
             Column(
