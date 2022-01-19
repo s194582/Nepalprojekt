@@ -39,6 +39,7 @@ fun HealthGeneral (
             TopBar(topBarTitle = stringResource(id = R.string.health_information)) { navController.navigate(Screen.MainMenu.route) }
 
             PictureBox(title = null, image = painterResource(id = R.drawable.whentowashhands), description = null)
+
             // Pregnancy info box
             InfoBoxesExpandable(title = stringResource(id = R.string.pregnancy), // Pregnancy
                 painterResource(id = R.drawable.hp1_gravid_lyttermave),
@@ -52,22 +53,17 @@ fun HealthGeneral (
                 null, // TODO: revisit to see if drawing has been made
                 stringResource(id = R.string.pregnancy_from_the_first),
                 null, // TODO: revisit to see if drawing has been made
-                stringResource(id = R.string.pregnancy_get_enough_rest))
+                stringResource(id = R.string.pregnancy_get_enough_rest),
+                null, null)
 
-            // Generel information consists of vitamin informations atm.
+            // General information consists of vitamin information atm.
             InfoBoxesExpandable(title = stringResource(id = R.string.general_information),
                 null,
                 stringResource(id = R.string.vitamin_a_description),
                 null,
                 stringResource(id = R.string.iron_element_description),
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null)
+                null, null, null, null, null, null, null, null, null, null)
+
             PictureBox(title = null, image = painterResource(id = R.drawable.whentogotohospital), description = null)
         }
     }
@@ -91,7 +87,9 @@ fun InfoBoxesExpandable (
     image5: Painter?,
     desc5: String?,
     image6: Painter?,
-    desc6: String?
+    desc6: String?,
+    image7: Painter?,
+    desc7: String?
 ) {
     Card(
         backgroundColor = Color.White,
@@ -99,7 +97,7 @@ fun InfoBoxesExpandable (
         shape = RoundedCornerShape(8.dp),
         modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
     ) {
-        InfoElementExpandable(title, image, description, image2, desc2, image3, desc3, image4, desc4, image5, desc5, image6, desc6)
+        InfoElementExpandable(title, image, description, image2, desc2, image3, desc3, image4, desc4, image5, desc5, image6, desc6, image7, desc7)
     }
 }
 
@@ -121,7 +119,9 @@ fun InfoElementExpandable(
     image5: Painter?,
     desc5: String?,
     image6: Painter?,
-    desc6: String?
+    desc6: String?,
+    image7: Painter?,
+    desc7: String?
 ) {
     var expanded by remember { mutableStateOf(false) } //rememberSaveable keeps expanded elements expanded
 
@@ -179,6 +179,12 @@ fun InfoElementExpandable(
                 }
                 if (desc6 != null) {
                     Text(desc6)
+                }
+                if (image7 != null) {
+                    Image(painter = image7, contentDescription = null)
+                }
+                if (desc7 != null) {
+                    Text(desc7)
                 }
             }
         }

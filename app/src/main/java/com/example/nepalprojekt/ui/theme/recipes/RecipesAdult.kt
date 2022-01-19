@@ -43,7 +43,7 @@ fun RecipesAdult (
                 stringResource(id = R.string.strengthening_food_helps_in_growth), null,
                 stringResource(id = R.string.strengthening_food_essential_for_growth_and_repair), null,
                 stringResource(id = R.string.strengthening_food_heals_wound), null,
-                stringResource(id = R.string.strengthening_food_boost_immunity), null,null
+                stringResource(id = R.string.strengthening_food_boost_immunity), null,null, null, null
             )
             InfoBoxesExpandable( // Protective food
                 title = stringResource(id = R.string.protective_food),
@@ -52,7 +52,7 @@ fun RecipesAdult (
                 stringResource(id = R.string.protective_food_enhance_immunity), null,
                 stringResource(id = R.string.protective_food_green_and_yellow_food), null,
                 stringResource(id = R.string.protective_food_fiber_rich_vegetables), null,
-                stringResource(id = R.string.protective_food_helps_in_digestion), null,null
+                stringResource(id = R.string.protective_food_helps_in_digestion), null,null, null, null
             )
             InfoBoxesExpandable( // Energy food
                 title = stringResource(id = R.string.energy_food),
@@ -61,7 +61,7 @@ fun RecipesAdult (
                 stringResource(id = R.string.energy_food_provides_energy), null,
                 stringResource(id = R.string.energy_food_provides_warmth_to_the_body), null,
                 stringResource(id = R.string.energy_food_prevent_diseases), null,
-                stringResource(id = R.string.energy_food_long_therm_deficiency), null,null
+                stringResource(id = R.string.energy_food_long_therm_deficiency), null,null, null, null
             )
             RecipeSuggestionsIntro() //Overskrift til opskrifter
             WaterCressCurry()

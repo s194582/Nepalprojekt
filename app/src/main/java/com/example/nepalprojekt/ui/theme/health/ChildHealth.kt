@@ -69,7 +69,6 @@ fun ZeroSix (
             // Feed from one breast only after feeding in another way.
             Text(stringResource(id = R.string.zero_six_feed_from_one_breast_only))
 
-            /* TODO: Revisit, as the following might get left out */
             // Feeding the child 6 months of age and additional vitamin A capsules and parasite medicine every 6-6 months.
             Text(stringResource(id = R.string.zero_six_feeding_the_child_6_months))
 
