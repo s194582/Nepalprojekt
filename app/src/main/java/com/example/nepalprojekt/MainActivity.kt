@@ -23,6 +23,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -125,7 +126,8 @@ fun HealthRow( // Box containing two buttons for health info
                 Text(title,
                     style = TextStyle(
                         color = Color.Black,
-                        fontSize = 20.sp,
+                        fontSize = 24.sp,
+                        fontWeight = FontWeight.SemiBold,
                         textAlign = TextAlign.Center)//.offset(40.dp, 40.dp))
                 )
                 Spacer(modifier = Modifier.height(6.dp))
@@ -175,7 +177,8 @@ fun RecipeRow( // Box containing two buttons for recipes
                 Text(title,
                     style = TextStyle(
                         color = Color.Black,
-                        fontSize = 20.sp,
+                        fontSize = 24.sp,
+                        fontWeight = FontWeight.SemiBold,
                         textAlign = TextAlign.Center)//.offset(40.dp, 40.dp))
                 )
                 Spacer(modifier = Modifier.height(6.dp))

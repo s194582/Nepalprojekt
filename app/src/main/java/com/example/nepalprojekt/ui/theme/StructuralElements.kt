@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.sp
  * GeneralHealth.kt */
 val spaceBetweenChildren = 12.dp
 
-val fontSizeTitles = 16.sp
+val fontSizeTitles = 18.sp
 //val cardBackgroundColor = MaterialTheme.colors.primary
 
 /** BackButton is used in

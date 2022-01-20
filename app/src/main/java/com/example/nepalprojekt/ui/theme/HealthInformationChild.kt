@@ -117,6 +117,11 @@ fun HealthChild (
                 null, null, null, null, null, null
             )
 
+            // Growth monitoring
+            PictureBox(title = stringResource(id = R.string.growth_monitoring),
+                image = painterResource(id = R.drawable.growth_monitoring),
+                description = stringResource(id = R.string.growth_monitoring_description))
+
             /*InfoBoxes(title = "० - ६ महिना", description = "description1", image = null) {
             navController.navigate(Screen.ZeroSix.route)
         } // 0-6 months

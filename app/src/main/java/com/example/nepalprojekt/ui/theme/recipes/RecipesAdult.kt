@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.nepalprojekt.R
@@ -117,7 +118,10 @@ fun WaterCressCurry () {
                 .fillMaxWidth(1f)
         ) {
             Text(modifier = Modifier.align(Alignment.Center),
-                text = stringResource(id = R.string.recipe_water_cress_curry)) // Title
+                text = stringResource(id = R.string.recipe_water_cress_curry),
+                fontSize = fontSizeTitles,
+                fontWeight = FontWeight.SemiBold
+            ) // Title
         }
         Row(modifier = Modifier
             .padding(12.dp)
@@ -208,7 +212,10 @@ fun CauliflowerCurry () {
                 .fillMaxWidth(1f)
         ) {
             Text(modifier = Modifier.align(Alignment.Center),
-                text = stringResource(id = R.string.recipe_cauliflower_curry)) // Title
+                text = stringResource(id = R.string.recipe_cauliflower_curry),
+                fontSize = fontSizeTitles,
+                fontWeight = FontWeight.SemiBold
+            ) // Title
         }
         Row(modifier = Modifier
             .padding(12.dp)

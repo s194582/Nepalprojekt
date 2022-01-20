@@ -16,7 +16,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun PictureBox (
@@ -38,7 +40,10 @@ fun PictureBox (
                 .fillMaxSize()
         ) {
             if (title != null) {
-                Text(title)
+                Text(title,
+                    fontSize = fontSizeTitles,
+                    fontWeight = FontWeight.SemiBold
+                )
             }
             if (image != null) {
                 Image(painter = image, contentDescription = null)
@@ -122,7 +127,10 @@ fun InfoElementExpandable(
                 .weight(1f)
                 .padding(12.dp)
         ) {
-            Text(title) //Place of title of each element
+            Text(title, //Place of title of each element
+                fontSize = fontSizeTitles,
+                fontWeight = FontWeight.SemiBold
+            )
 
             if (expanded) {
                 if (image != null) {
