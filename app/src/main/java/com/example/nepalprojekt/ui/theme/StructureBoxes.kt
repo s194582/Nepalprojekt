@@ -16,9 +16,39 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
+/**
+ * Reusable button element
+ * Holds a subject and an onClick function
+ * Used for MainMenu buttons
+ */
+@Composable
+fun ButtonElement(
+    subject: String,
+    onClick: () -> Unit
+) {
+    Card(
+        shape = RoundedCornerShape(10.dp),
+        elevation = 5.dp,
+        modifier = Modifier
+            .padding(5.dp)
+    ) {
+        Button(onClick = onClick //Creates reusable button function
+        ) {
+            Text(subject,
+                style = TextStyle(
+                    color = Color.White,
+                    fontSize = 16.sp,
+                    textAlign = TextAlign.Center)
+            )
+        }
+    }
+}
 
 @Composable
 fun PictureBox (
@@ -184,6 +214,72 @@ fun InfoElementExpandable(
 
                 contentDescription = null
             )
+        }
+    }
+}
+
+/**
+ * Each box containing health information
+ * In a Card shape, making rounded edges possible
+ */
+@Composable
+fun InfoBoxes (
+    title: String,
+    description: String,
+    image: Painter?, // Possibility of an image
+    onClick: () -> Unit
+) {
+    Card(
+        backgroundColor = Color.White,
+        border = BorderStroke(width = 4.dp, color = MaterialTheme.colors.primary),
+        shape = RoundedCornerShape(8.dp),
+        modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
+    ) {
+        InfoElement(title, description, image, onClick)
+    }
+}
+
+/**
+ * Modifications and animation for each health info element
+ */
+@Composable
+fun InfoElement(
+    title: String,
+    description: String,
+    image: Painter?,
+    onClick: () -> Unit
+) {
+    var expanded by remember { mutableStateOf(false) } //rememberSaveable keeps expanded elements expanded
+
+    Row (modifier = Modifier
+        .padding(12.dp)
+        .animateContentSize( //animateContentSize automates the process of creating the animation (replaces extraPadding)
+            animationSpec = spring(
+                dampingRatio = Spring.DampingRatioMediumBouncy,
+                stiffness = Spring.StiffnessLow
+            )
+        )
+    ) {
+        Column (modifier = Modifier
+            .weight(1f)
+            .padding(12.dp)
+        ) {
+            Text(title) //Place of title of each element
+
+            if (expanded) {
+                Text(description) //Place of description of each element
+                if (image != null) {
+                    Image(painter = image, contentDescription = null)
+                }
+            }
+
+            IconButton(onClick = onClick) {
+                Icon(
+                    imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
+
+                    contentDescription = null
+                )
+            }
         }
     }
 }

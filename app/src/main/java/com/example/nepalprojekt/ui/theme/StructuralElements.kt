@@ -15,8 +15,13 @@ import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+val Violet = Color(0xFFe1bee7)
+val newViolet = Color(0xFFf4d4fa)
+val seafoam = Color(0xffe0f2f1)
+val purple = Color(0xff6633FF)
+
 /** spaceBetweenChildren is used in
- * ChildHealth.kt for vertical spacing
+ * ChildHealthPages.kt for vertical spacing
  * GeneralHealth.kt */
 val spaceBetweenChildren = 12.dp
 
@@ -24,7 +29,7 @@ val fontSizeTitles = 18.sp
 //val cardBackgroundColor = MaterialTheme.colors.primary
 
 /** BackButton is used in
- * ChildHealth.kt to navigate back to Child Health Info page
+ * ChildHealthPages.kt to navigate back to Child Health Info page
  * GeneralHealth.kt */
 @Composable
 fun BackButton (
