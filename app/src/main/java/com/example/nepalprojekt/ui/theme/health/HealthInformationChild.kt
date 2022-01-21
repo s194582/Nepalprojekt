@@ -97,20 +97,6 @@ fun HealthChild (
             PictureBox(title = stringResource(id = R.string.growth_monitoring),
                 image = painterResource(id = R.drawable.growth_monitoring),
                 description = stringResource(id = R.string.growth_monitoring_description))
-
-            /*InfoBoxes(title = "० - ६ महिना", description = "description1", image = null) {
-            navController.navigate(Screen.ZeroSix.route)
-        } // 0-6 months
-        InfoBoxes(title = "६ - ९ महिना", description = "description2", image = null) {
-            navController.navigate(Screen.SixNine.route)
-        } // 6-9 months
-        InfoBoxes(title = "९ - १२ महिना", description = "description3", image = null) {
-            navController.navigate(Screen.NineTwelve.route)
-        } // 9-12 months
-        InfoBoxes(title = "१२ - २४ महिना", description = "description4", image = null) {
-            navController.navigate(Screen.TwelveTwentyFour.route)
-        } // 12-24 months
-         */
         }
     }
 }

@@ -11,9 +11,4 @@ sealed class Screen(val route:String) {
 
     object HealthInfoGeneral : Screen("health_general")
     object HealthInfoChild : Screen("health_child")
-
-    object ZeroSix : Screen("zero_six")
-    object SixNine : Screen("six_nine")
-    object NineTwelve : Screen("nine_twelve")
-    object TwelveTwentyFour : Screen("twelve_twentyfour")
 }

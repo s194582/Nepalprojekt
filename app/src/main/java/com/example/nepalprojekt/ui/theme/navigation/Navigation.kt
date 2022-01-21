@@ -4,10 +4,6 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.nepalprojekt.ui.theme.health.NineTwelve
-import com.example.nepalprojekt.ui.theme.health.SixNine
-import com.example.nepalprojekt.ui.theme.health.TwelveTwentyfour
-import com.example.nepalprojekt.ui.theme.health.ZeroSix
 import com.example.nepalprojekt.ui.theme.navigation.Screen
 import com.example.nepalprojekt.ui.theme.recipes.RecipesAdult
 import com.example.nepalprojekt.ui.theme.recipes.RecipesChild
@@ -43,22 +39,6 @@ fun Navigation() {
         composable(route = Screen.HealthInfoChild.route
         ) {
             HealthChild(navController = navController)
-        }
-        composable(route = Screen.ZeroSix.route
-        ) {
-            ZeroSix(navController = navController)
-        }
-        composable(route = Screen.SixNine.route
-        ) {
-            SixNine(navController = navController)
-        }
-        composable(route = Screen.NineTwelve.route
-        ) {
-            NineTwelve(navController = navController)
-        }
-        composable(route = Screen.TwelveTwentyFour.route
-        ) {
-            TwelveTwentyfour(navController = navController)
         }
     }
 }

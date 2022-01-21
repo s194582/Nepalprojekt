@@ -15,27 +15,10 @@ val newViolet = Color(0xFFf4d4fa)
 val seafoam = Color(0xffe0f2f1)
 val purple = Color(0xff6633FF)
 
-/** spaceBetweenChildren is used in
- * ChildHealthPages.kt for vertical spacing
- * GeneralHealth.kt */
+/** spaceBetweenChildren is used for matching spacing */
 val spaceBetweenChildren = 12.dp
 
 val fontSizeTitles = 18.sp
-
-/** BackButton is used in
- * ChildHealthPages.kt to navigate back to Child Health Info page
- * */
-@Composable
-fun BackButton (
-    onClick: () -> Unit
-) {
-    IconButton(onClick = onClick) {
-        Icon(
-            imageVector = Icons.Filled.ExpandLess,
-            contentDescription = ""
-        )
-    }
-}
 
 /** Composition inspired by https://www.jetpackcompose.net/scaffold topAppBar */
 @Composable
