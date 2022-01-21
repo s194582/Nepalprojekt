@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.nepalprojekt.R
 import com.example.nepalprojekt.ui.theme.*
+import com.example.nepalprojekt.ui.theme.navigation.Screen
 
 /** Recipes for adults. Contains an introduction, pictures of food groups in expandable boxes and then two recipes */
 @Composable
@@ -33,7 +34,8 @@ fun RecipesAdult (
 ) {
     LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
         items(items = titles) { title ->
-            TopBar(topBarTitle = stringResource(id = R.string.recipes)) { navController.navigate(Screen.MainMenu.route) }
+            TopBar(topBarTitle = stringResource(id = R.string.recipes)) { navController.navigate(
+                Screen.MainMenu.route) }
 
             Box() {Image(painterResource(id = R.drawable.hp4_balanceddiet_withmeat), contentDescription = null)}
             ResAdultIntro() // Intro

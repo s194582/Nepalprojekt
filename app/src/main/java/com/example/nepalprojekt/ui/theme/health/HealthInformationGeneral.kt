@@ -10,6 +10,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.nepalprojekt.R
+import com.example.nepalprojekt.ui.theme.navigation.Screen
 
 /**
  * Inspiration for expanding info boxes from
@@ -22,7 +23,8 @@ fun HealthGeneral (
 ) {
     LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
         items(items = titles) { title ->
-            TopBar(topBarTitle = stringResource(id = R.string.health_information)) { navController.navigate(Screen.MainMenu.route) }
+            TopBar(topBarTitle = stringResource(id = R.string.health_information)) { navController.navigate(
+                Screen.MainMenu.route) }
 
             PictureBox(title = null, image = painterResource(id = R.drawable.whentowashhands), description = null)
 

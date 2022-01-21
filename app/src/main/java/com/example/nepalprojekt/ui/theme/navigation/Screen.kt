@@ -1,4 +1,4 @@
-package com.example.nepalprojekt.ui.theme
+package com.example.nepalprojekt.ui.theme.navigation
 
 /**
  * Navigation inspiration from Philipp Lackner, Jetpack Compose Navigation for Beginners - Android Studio Tutorial, https://www.youtube.com/watch?v=4gUeyNkGE3g

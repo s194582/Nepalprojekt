@@ -11,8 +11,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.nepalprojekt.R
 import com.example.nepalprojekt.ui.theme.InfoBoxesExpandable
-import com.example.nepalprojekt.ui.theme.PictureBox
-import com.example.nepalprojekt.ui.theme.Screen
+import com.example.nepalprojekt.ui.theme.navigation.Screen
 import com.example.nepalprojekt.ui.theme.TopBar
 
 /**
