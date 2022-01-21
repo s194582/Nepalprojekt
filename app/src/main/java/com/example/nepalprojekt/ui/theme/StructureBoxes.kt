@@ -211,7 +211,6 @@ fun InfoElementExpandable(
         IconButton(onClick = { expanded = !expanded }) {
             Icon(
                 imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
-
                 contentDescription = null
             )
         }

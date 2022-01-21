@@ -13,7 +13,8 @@ import com.example.nepalprojekt.ui.theme.recipes.RecipesChild
 
 /**
  * Navigation inspiration from Philipp Lackner, Jetpack Compose Navigation for Beginners - Android Studio Tutorial,
- * https://www.youtube.com/watch?v=4gUeyNkGE3g*/
+ * https://www.youtube.com/watch?v=4gUeyNkGE3g
+ * */
 @Composable
 fun Navigation() {
     val navController = rememberNavController() //Creating NavController, the central API for the Navigation component
